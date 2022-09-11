@@ -1,0 +1,2 @@
+class SitewideSetting < ApplicationRecord
+end

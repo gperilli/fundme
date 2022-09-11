@@ -1,0 +1,72 @@
+<%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/chart.js' %>
+
+<% 
+    all_donations = []
+    twentysub_donations = []
+    twohundredsub_donations = [] 
+    undertwenty_donations = []
+    overtwenty_donations = []
+    ovetime_donations = []
+    onetime_donations = []
+    Donation.all.each do |donation| 
+        if donation.amount.is_a? Integer
+            all_donations << donation.amount 
+            twentysub_donations << donation.amount if donation.amount == 20 && (donation.donation_type == "subscription" || donation.donation_type == "automated")
+            twohundredsub_donations << donation.amount if donation.amount == 200 && donation.donation_type == "subscription"
+            undertwenty_donations << donation.amount if donation.amount < 20 && donation.donation_type != "subscription"
+            overtwenty_donations << donation.amount if donation.amount > 20 && donation.donation_type != "subscription"
+            onetime_donations << donation.amount if donation.donation_type != "subscription" && donation.donation_type != "automated" 
+        end
+    end 
+%>
+<%# raise %>  
+
+<div style="width: 100%; display: flex; flex-direction: row;">
+    <div style="">
+        <p style="font-size: medium; margin-top: 0px; margin-bottom: 0px;">Donations made since June 2022: <span style="text-decoration: underline;"><%= Donation.all.count %></span></p>
+        <p style="font-size: medium; margin-top: 5px;">Total donations cumulative value: <span style="text-decoration: underline;">$<%= all_donations.sum %></span></p>
+        <p style="margin-top: 5px;">Total number of $20/month donations: <span style="text-decoration: underline;"><%= twentysub_donations.size %></span></p>       
+        <p style="margin-top: 5px;">Total number of one time donations: <span style="text-decoration: underline;"><%= onetime_donations.size %></span></p>
+    </div>
+    <div style="width: 50%;">
+        <canvas id="myDonationsChart" data-donation-chart-data="<%= [twentysub_donations.size, twohundredsub_donations.size, undertwenty_donations.size, overtwenty_donations.size] %>"></canvas>
+    </div>
+  
+</div>
+
+<script>
+donationChartElementData = document.querySelector("#myDonationsChart").dataset.donationChartData
+console.log(donationChartElementData)
+  const labelsd = [
+    '$20/month donations',
+    '$200/year donations',
+    'one time donations < $20',
+    'one time donations > $20',
+  ];
+
+  const datad = {
+    labels: labelsd,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)'
+    ],
+      //borderColor: 'rgb(255, 99, 132)',
+      data: JSON.parse("[" + donationChartElementData + "]")[0],
+    }]
+  };
+
+  const configd = {
+    type: 'pie',
+    data: datad,
+    options: {}
+  };
+
+  const myChartd = new Chart(
+    document.getElementById('myDonationsChart'),
+    configd
+  );
+</script>

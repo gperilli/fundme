@@ -1,0 +1,2 @@
+class SitewideTextItem < ApplicationRecord
+end
