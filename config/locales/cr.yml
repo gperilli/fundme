@@ -1,13 +1,13 @@
 
 
 cr:
-  meta_title: "Depdef - Sipò legal pou moun ki fè fas a depòtasyon"
-  meta_description: "Depdef se yon sèvis abònman ki bay avoka pou odyans depòtasyon manm yo." 
+  meta_title: "FundMe - Sipò legal pou moun ki fè fas a depòtasyon"
+  meta_description: "FundMe se yon sèvis abònman ki bay avoka pou odyans depòtasyon manm yo." 
   # signups
   login: "konekte"
   log_out: "lògawoug"
   username: "non itilizatè"
-  email_or_username: "imèl oswa non itilizatè"
+  email: "imèl"
   forgot_your_password?: "Bliye mo pas ou?"
   send_me_reset_password_instructions: "Voye m 'Reyajiste enstriksyon modpas"
   send: "voye"
@@ -77,7 +77,7 @@ cr:
       our_personal_funds: "Fon pèsonèl nou yo."
       for_a_small_monthly_donation: "Pou yon ti don mwa ou ka vin manm fon defans depotasyon."
       immigration_law: "lwa imigrasyon"
-      becoming_a_depdef_member: "Vin yon Manm"
+      becoming_a_FundMe_member: "Vin yon Manm"
       we_will_never_ask: "Nou p'ap janm mande adrès ou oswa kote ou. Nou pa vle konnen, nan ka nenpòt otorite ta janm mande nou. Bay imèl ou a opsyonèl epi li pa obligatwa."
       we_will_never_ask_for_your_address: "Nou p'ap janm mande adrès ou oswa kote ou. Nou pa vle konnen, nan ka nenpòt otorite ta janm mande nou. Bay imèl ou a opsyonèl epi li pa obligatwa."
       follow_these_steps_to_make_donations: "Swiv etap sa yo pou fè don:"
@@ -86,7 +86,7 @@ cr:
       check_your_member_number: "Wap resevwa nimewo manm ou ak nimewo telefòn ijans ou. Ekri enfòmasyon sa yo epi bay yon moun ou fè konfyans."
       dont_forget: "Pa bliye fè sa chak mwa oswa manm yo ap tonbe."
       if_you_are_arrested: "Si yo arete w pa ICE, rele nimewo ijans bileng nou an epi bay nimewo manm ou a ak detay sou arestasyon ak kote yo ye a."
-      depdef_will_use: "Nou pral sèvi ak tout resous Fon Defans Depòtasyon pou jwenn yon bon avoka imigrasyon gratis."
+      FundMe_will_use: "Nou pral sèvi ak tout resous Fon Defans Depòtasyon pou jwenn yon bon avoka imigrasyon gratis."
       legal_support: "Sipò Legal"
       all_attorneys_that_work_with_us: "Tout avoka ki travay avèk nou se bilimgual."
       we_are_against_the_breakup: "Nou kont kraze fanmi yo. Nou fè efò pou ede nenpòt moun ki nan sitiyasyon malere sa a, men donatè chak mwa nou yo gen priyorite. Donatè ki gen plan mansyèl yo ka asire yo ke yo pral gen tout resous Fon Defans Depòtasyon pou jwenn yon avoka swa imedyatman apre yon arestasyon oswa anvan nenpòt pwosedi depòtasyon. Moun ki arete sou yon akizasyon kriminèl pral resevwa yon avoka nan men gouvènman an pou dosye kriminèl yo sèlman. Avoka nou yo pral travay avèk avoka kriminèl ou a pou egzamine pi bon fason pou jere sitiyasyon imigrasyon ou. Tout avoka ki travay avèk nou se bilimgual. Nou toujou ap voye imèl bay reprezantan kongrè sid florida nou yo, pou fè yo pase lejislasyon pou bay avoka pou imigran yo. Nou ankouraje w fè menm bagay la."

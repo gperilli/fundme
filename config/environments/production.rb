@@ -90,33 +90,23 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Action Mailer Settings
-  config.action_mailer.default charset: 'utf-8'
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: "fundme.herokuapp.com", protocol: "https" }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_caching = false
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = {:host =>'localhost:3000'}
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'localhost:3000',
-    user_name:            Rails.application.config.mailer_address_development,
-    password:             ENV['GMAILAPP_PASSWORD'],
-    authentication:       "plain",
-    #ssl:                    true,
-    #tls:                    true,
+    address:              'smtp.zoho.jp',
+    port:                 '465',
+    domain:               'fundme.herokuapp.com',
+    user_name:            Rails.application.config.mailer_address,
+    password:             ENV['ZOHO_PASSWORD'],
+    authentication:       :plain,
+    ssl:                    true,
     enable_starttls_auto: true,
     open_timeout:         5,
     read_timeout:         5 }
 
-#  ActionMailer::Base.smtp_settings = {
-#  :port           => ENV['MAILGUN_SMTP_PORT'],
-#  :address        => ENV['MAILGUN_SMTP_SERVER'],
-#  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-#  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-#  :domain         => 'depdef.heroku.com', # UPDATE THIS VALUE WITH YOUR OWN APP
-#  :authentication => :plain,
-#}
 ActionMailer::Base.delivery_method = :smtp
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector

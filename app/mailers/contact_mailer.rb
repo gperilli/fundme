@@ -8,6 +8,7 @@ class ContactMailer < ApplicationMailer
       puts "Email #{@message_form[:email]}, Name: #{@message_form[:name]}, Subject: #{@message_form[:subject]}, Message: #{@message_form[:message]},"
       puts ""
       puts "************************"
-      mail(to: ["garethperilli@gmail.com", "jcg115@gmail.com", "jgerardi618@gmail.com"], subject: @message_form[:subject]) if @message_form[:name] != "CrytoAwapy"
+      mail(to: ["gareth@gperilli.dev"], subject: @message_form[:subject])
+      puts "BANG"
     end
   end

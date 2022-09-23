@@ -4,9 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    
-    <h1>Donation Payment Made At <a href="https://www.depdef.org" target="_blank">www.depdef.org</a></h1>
-    <p>Your donation was made just now at depdef.org. Here are the details:</p>
+
+    <h1>Donation Payment Made At <a href="https://www.fundme.org" target="_blank">www.fundme.org</a></h1>
+    <p>Your donation was made just now at fundme.org. Here are the details:</p>
     <ul>
       <li>User name: <%= @donation.user.username %></span>
       <li>User number: <%= @donation.user.user_number %></span>
@@ -26,7 +26,7 @@
       <li>Stripe payment reference: <%= @donation.stripe_payment_id %></li>
     </ul>
 
-    <p>Thanks very much <%= @donation.user.first_name %>. For legal support at depdef please contact us at info@depdef.org. Our phone number is: 954-466-4427</p>
-    <img src="https://www.depdef.org/og-share-image.png" style="width: 100%;" alt="Depdef logo">
+    <p>Thanks very much <%= @donation.user.first_name %>.</p>
+    <img src="https://www.gperilli.dev/images/ogimages/fundme-og-share-image.png" style="width: 100%;" alt="FundMe logo">
   </body>
 </html>

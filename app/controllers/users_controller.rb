@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
+    before_action :authenticate_user!
     def show
         @user = current_user
-        #@sitewide_text_items = SitewideTextItem.all
-        #
-        #authorize @user
     end
 
     def update
@@ -11,7 +9,6 @@ class UsersController < ApplicationController
     end
 
     def cancel_subscription
-        puts "CANCELLING"
         CancelSubscriptionJob.perform_now(current_user)
     end
 

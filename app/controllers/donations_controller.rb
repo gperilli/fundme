@@ -1,6 +1,6 @@
 class DonationsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
   end
 
@@ -14,34 +14,29 @@ class DonationsController < ApplicationController
     else
       @sub_amount = 0
     end
-    #@sitewide_text_items = SitewideTextItem.all
   end
 
   def show
     @donation = Donation.find(params[:id])
-    #@sitewide_text_items = SitewideTextItem.all
   end
 
-  
-
   def create
-    
+
     if form_params[:donation_type] == "subscription" && current_user.subscribed == false
       # Subscribing User
       current_user.update_attribute(:subscribed, true)
       current_user.update_attribute(:subscription_stage, 1)
-      current_user.update_attribute(:subscription_frequency, form_params[:subscription_frequency]) 
-      
+      current_user.update_attribute(:subscription_frequency, form_params[:subscription_frequency])
       current_user.subscriptions << Subscription.new(
         status: "active",
       )
 
       @donation = Donation.new(
-        title: form_params[:title], 
-        stripe_payment_id: form_params[:stripe_payment_id], 
-        donation_type: form_params[:donation_type], 
-        amount: form_params[:amount], 
-        stripe_payment_method_id: Stripe::PaymentIntent.retrieve(form_params[:stripe_payment_id])[:payment_method], 
+        title: form_params[:title],
+        stripe_payment_id: form_params[:stripe_payment_id],
+        donation_type: form_params[:donation_type],
+        amount: form_params[:amount],
+        stripe_payment_method_id: Stripe::PaymentIntent.retrieve(form_params[:stripe_payment_id])[:payment_method],
         subscription_set_number: current_user.subscription_stage,
         user_id: current_user.id,
         subscription_id: "#{current_user.subscriptions.last.id}"
@@ -49,34 +44,29 @@ class DonationsController < ApplicationController
       @donation.update_attribute(:subscription_status, "active")
     else
       @donation = Donation.new(
-        title: form_params[:title], 
-        stripe_payment_id: form_params[:stripe_payment_id], 
-        donation_type: form_params[:donation_type], 
-        amount: form_params[:amount], 
+        title: form_params[:title],
+        stripe_payment_id: form_params[:stripe_payment_id],
+        donation_type: form_params[:donation_type],
+        amount: form_params[:amount],
         user_id: current_user.id,
-        #status: Stripe::PaymentIntent.retrieve(donation.stripe_payment_id)[:status],
         )
     end
-    
-    #@donation.user_id = current_user.id
+
     @donation.update_attribute(:status, "processing")
-    # status: ,
     if @donation.save
       @donation.update_attribute(:status, Stripe::PaymentIntent.retrieve(@donation.stripe_payment_id)[:status])
       total_donations = @donation.user.total_donations
-      total_donations += @donation.amount 
+      total_donations += @donation.amount
       @donation.user.update_attribute(:total_donations, total_donations)
       redirect_to @donation
     else
       flash.now[:error] = "Oops, something went wrong with your submission. Please try again!"
-      
       render :new
     end
-    
+
 
   end
-    
-  
+
 
   private
   def form_params
@@ -89,5 +79,4 @@ class DonationsController < ApplicationController
     )
   end
 
-  
 end

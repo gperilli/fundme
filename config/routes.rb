@@ -14,9 +14,7 @@ Rails.application.routes.draw do
   # Devise
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  #devise_for :users
   devise_for :users, :controllers => { registrations: 'registrations' }
-  #devise_for :users, :controllers => { registrations: 'users/registrations' }
   resources :users, only: [:show]
   post '/users/update', to: 'users#update'
   post '/users/cancel_subscription', to: 'users#cancel_subscription'
@@ -28,9 +26,7 @@ Rails.application.routes.draw do
 
 
   resources :ddpages
-  #resources :pages, only[:show]
-  #get '/immigration_law', to: 'pages#immigration_law'
-  get '/test_page', to: 'pages#test_page'
+
   root to: 'pages#home'
   post "send_contact" => "pages#send_contact"
 end

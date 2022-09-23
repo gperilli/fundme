@@ -17,8 +17,7 @@ class User < ApplicationRecord
   has_many :subscriptions, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, 
-  :validatable, authentication_keys: [:login]
+  :recoverable, :rememberable, :validatable
   #validates :username, presence: true, uniqueness: true
   #validates :email, uniqueness: true
   validates_uniqueness_of :email, conditions: -> {where.not(:email => '')}
@@ -28,29 +27,28 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   validates :first_name, :last_name, presence: true
-  
 
   # Callbacks
   before_validation :attach_uuid_on_user_creation, :attach_user_number_on_user_creation, on: :create
-  
+
   # Scopes
   scope :subscribed, -> { where(subscribed: true) }
   scope :not_subscribed, -> { where(subscribed: false) }
-  
+
   # login username OR Email
-  attr_writer :login
+  # attr_writer :login
 
-  def login
-    @login || self.username || self.email
-  end
+  #def login
+  #  @login || self.username || self.email
+  #end
 
-  def email_required?
-    false
-  end
-
-  def email_changed?
-    false
-  end
+  #def email_required?
+  #  false
+  #end
+#
+  #def email_changed?
+  #  false
+  #end
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
@@ -69,7 +67,7 @@ class User < ApplicationRecord
   def attach_user_number_on_user_creation
     # generate user_number
     rndhx = SecureRandom.hex(8)
-    
+
     all_user_numbers = []
     User.all.each do |user|
       all_user_numbers << user.user_number

@@ -1,16 +1,8 @@
 class PaymentIntentsController < ApplicationController
   def create
     # Create a payment intent with the expected amount,
-    
-    puts "#################" 
-    puts "Payment Params"
-    puts payment_params
-    puts "#################" 
-    
     payment_params[:donation_type] == "one_time" ? payment_type = "one time donation" : payment_type = "subscription donation"
-    
 
-    
     if current_user.stripe_customer_id.nil?
       stripe_customer = Stripe::Customer.create(
         email: current_user[:email],
@@ -20,9 +12,7 @@ class PaymentIntentsController < ApplicationController
       current_user.update(stripe_customer_id: stripe_customer[:id])
       puts stripe_customer
     end
-    
-    
-    
+
     if payment_params[:donation_type] == "one_time"
       # Payment Intent for single payment
       payment_intent = Stripe::PaymentIntent.create(
@@ -30,10 +20,10 @@ class PaymentIntentsController < ApplicationController
         amount: payment_params[:amount].to_i * 100,
         currency: 'usd',
         description: "$#{payment_params[:amount]} #{payment_type}",
-        statement_descriptor: 'Depdef Donation',
-      ) 
-      
-    else      
+        statement_descriptor: 'FundMe Donation',
+      )
+
+    else
       payment_intent = Stripe::PaymentIntent.create(
         customer: current_user.stripe_customer_id,
         setup_future_usage: 'off_session',
@@ -43,11 +33,9 @@ class PaymentIntentsController < ApplicationController
           enabled: true,
         },
         description: "$#{payment_params[:amount]} #{payment_type} - 1 of 12",
-        statement_descriptor: 'Depdef Donation',
+        statement_descriptor: 'FundMe Donation',
       )
     end
-
-
 
     # return the client secret
     render json: {

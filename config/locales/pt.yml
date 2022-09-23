@@ -1,13 +1,13 @@
 
 
 pt:
-  meta_title: "Depdef - Apoio jurídico para aqueles que enfrentam deportação"
-  meta_description: "Depdef é um serviço de assinatura que fornece advogados para audiências de deportação de membros."  
+  meta_title: "FundMe - Apoio jurídico para aqueles que enfrentam deportação"
+  meta_description: "FundMe é um serviço de assinatura que fornece advogados para audiências de deportação de membros."  
   # signups
   login: "conecte-se"
   log_out: "sair"
   username: "nome de usuário"
-  email_or_username: "email ou nome de usuário"
+  email: "email"
   forgot_your_password?: "Esqueceu sua senha?"
   send_me_reset_password_instructions: "Envie-me instruções de redefinição de senha"
   send: "mandar"
@@ -77,7 +77,7 @@ pt:
       our_personal_funds: "Nossos fundos pessoais."
       for_a_small_monthly_donation: "Por uma pequena doação mensal você pode se tornar membro do fundo de defesa de deportação."
       immigration_law: "Lei de Imigração"
-      becoming_a_depdef_member: "Torne-se um membro do Depdef"
+      becoming_a_fundme_member: "Torne-se um membro do Fundme"
       we_will_never_ask: "Nunca pediremos seu endereço ou localização. Não queremos saber, caso alguma autoridade nos pergunte. Fornecer seu e-mail é opcional e não obrigatório."
       we_will_never_ask_for_your_address: "Nunca pediremos seu endereço ou localização. Fornecer seu e-mail é opcional e não é obrigatório durante os pagamentos de inscrição ou doação."
       follow_these_steps_to_make_donations: "Siga estes passos para fazer doações:"
@@ -86,7 +86,7 @@ pt:
       check_your_member_number: "Você receberá seu número de membro e número de telefone de emergência. Anote essas informações e entregue a alguém de sua confiança."
       dont_forget: "Não se esqueça de fazer isso todos os meses ou a assinatura será cancelada."
       if_you_are_arrested: "Se você for preso pelo ICE, ligue para nosso número de emergência bilíngue e forneça seu número de membro e detalhes da prisão e localização."
-      depdef_will_use: "Usaremos todos os recursos do Deportation Defense Fund para conseguir um bom advogado de imigração sem nenhum custo."
+      fundme_will_use: "Usaremos todos os recursos do Deportation Defense Fund para conseguir um bom advogado de imigração sem nenhum custo."
       legal_support: "Suporte legal"
       all_attorneys_that_work_with_us: "Todos os advogados que trabalham conosco são bilíngües."
       we_are_against_the_breakup: "Somos contra a separação das famílias. Nós nos esforçamos para ajudar qualquer pessoa nessa situação infeliz, mas nossos doadores mensais têm prioridade. Os doadores em planos mensais podem ter certeza de que terão todos os recursos do Deportation Defense Fund para encontrar um advogado imediatamente após a prisão ou antes de qualquer processo de deportação. Aqueles que são presos sob acusação criminal receberão um advogado do governo apenas para seu caso criminal. Nossos advogados trabalharão com seu advogado criminal para examinar a melhor maneira de lidar com seu status de imigração. Todos os advogados que trabalham conosco são bilíngües. Estamos constantemente enviando e-mails para nossos representantes no Congresso do sul da Flórida, para que eles aprovem legislação para fornecer advogados para imigrantes. Exortamos você a fazer o mesmo."

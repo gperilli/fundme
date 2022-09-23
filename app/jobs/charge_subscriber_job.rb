@@ -28,7 +28,7 @@ class ChargeSubscriberJob < ApplicationJob
           amount: initial_subscription_donation.amount * 100,
           currency: 'usd',
           description: "$#{initial_subscription_donation[:amount]} subscription donation - #{donation.user.subscription_stage} of 12",
-          statement_descriptor: 'Depdef Donation',
+          statement_descriptor: 'FundMe Donation',
           customer: stripe_customer_id,
           payment_method: stripe_payment_method_id,
           off_session: true,
@@ -44,13 +44,13 @@ class ChargeSubscriberJob < ApplicationJob
       end
 
       subscription_id = donation.subscription_id.present? ? donation.subscription_id : ""
-      
+
       automated_donation = Donation.create!(
-          title: "$20 / month Donation", 
-          stripe_payment_id: intent.id, 
-          donation_type: "automated", 
-          amount: initial_subscription_donation.amount, 
-          stripe_payment_method_id: Stripe::PaymentIntent.retrieve(initial_subscription_donation.stripe_payment_id)[:payment_method], 
+          title: "$20 / month Donation",
+          stripe_payment_id: intent.id,
+          donation_type: "automated",
+          amount: initial_subscription_donation.amount,
+          stripe_payment_method_id: Stripe::PaymentIntent.retrieve(initial_subscription_donation.stripe_payment_id)[:payment_method],
           user_id: initial_subscription_donation.user.id,
           subscription_set_number: donation.user.subscription_stage,
           status: "suceeded",
@@ -59,13 +59,9 @@ class ChargeSubscriberJob < ApplicationJob
       )
 
       total_donations = automated_donation.user.total_donations
-      total_donations += automated_donation.amount 
+      total_donations += automated_donation.amount
       automated_donation.user.update_attribute(:total_donations, total_donations)
 
     end
-
-    
   end
-
-
 end

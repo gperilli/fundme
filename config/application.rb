@@ -30,7 +30,7 @@ module Fundme
     # the framework and any gems in your application.
 
     # Mailing address
-    config.mailer_address = 'fundmeinfo@gmail.com'
+    config.mailer_address = 'info@fundme.org'
     config.mailer_address_development = 'fundmeinfo@gmail.com'
 
     # Don't generate system test files.

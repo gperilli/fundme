@@ -31,12 +31,12 @@
 
 en:
   meta_title: "FundMe - Funding for Your Projects"
-  meta_description: "Depdef is a subscription service that provides attorneys for members' deportation hearings." 
+  meta_description: "FundMe is a subscription service that provides attorneys for members' deportation hearings." 
   # signups
   login: "Log In"
   log_out: "Log Out"
   username: "username"
-  email_or_username: "email or username"
+  email: "email"
   forgot_your_password?: "Forgot your password?"
   send_me_reset_password_instructions: "Send me reset password instructions"
   send: "send"
@@ -106,7 +106,7 @@ en:
       our_personal_funds: "Our personal funds."
       for_a_small_monthly_donation: "For a small monthly donation you can become a member of the deportation defense fund and be protected with an attorney at no extra cost to you."
       immigration_law: "Immigration Law"
-      becoming_a_depdef_member: "Becoming A Depdef Member"
+      becoming_a_fundme_member: "Becoming A FundMe Member"
       we_will_never_ask: "We will never ask for your address or location. We do not want to know, in case any authorities ever ask us. Giving your e mail is optional and not required during signup or donation payments."
       we_will_never_ask_for_your_address: "We will never ask for your address or location. Giving your e mail is optional and not required during signup or donation payments."
       follow_these_steps_to_make_donations: "Follow these steps to make donations:"
@@ -115,7 +115,7 @@ en:
       check_your_member_number: "Check your member number and emergency phone number. Write this information down and give it to someone you trust."
       dont_forget: "Don't forget donations every month or membership will lapse."
       if_you_are_arrested: "If you are arrested by ICE, call our bilingual emergency number and give your member number and details of arrest and location."
-      depdef_will_use: "Depdef will use all resources of Deportation Defense Fund to get you a good immigration lawyer at no cost."
+      fundme_will_use: "FundMe will use all resources of Deportation Defense Fund to get you a good immigration lawyer at no cost."
       legal_support: "Legal Support"
       all_attorneys_that_work_with_us: "All attorneys that work with us are bilingual."
       we_are_against_the_breakup: "We are against the breakup of families and we strive to assist anyone in this unfortunate situation, but our monthly donors have priority. Donors on monthly plans can be assured that they will have all the resources of Deportation Defense Fund to find an attorney either immediatly after an arrest or before any deportation proceedings. Those who are arrested on a criminal charge will recieve a lawyer from the government for their criminal case only. Our attorneys will work with your criminal attorney to examine the best way to handle your immigration status. All attorneys that work with us are bilingual. We are constantly sending emails to our south florida congressional representatives, to have them pass legislation to provide attorneys for immigrants. We urge you to do the same."

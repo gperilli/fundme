@@ -28,31 +28,31 @@ class Donation < ApplicationRecord
 
   private
   def trigger_next_subscription_donation
-    
+
     if self.subscription_id.present?
       this_donations_subscription = Subscription.find_by!(id: self.subscription_id)
     end
     if self.amount == 20 && (self.donation_type == "subscription" || self.donation_type == "automated") #&& this_donations_subscription.status == "active"
       subscription_stage = self.user.subscription_stage + 1
-      if subscription_stage < 13        
-        self.user.update_attribute(:subscription_stage, subscription_stage) 
-        ChargeSubscriberJob.set(wait: 1.month).perform_later(self)
+      if subscription_stage < 13
+        self.user.update_attribute(:subscription_stage, subscription_stage)
+        ChargeSubscriberJob.set(wait: 1.minute).perform_later(self)
       elsif subscription_stage == 13
         # Stop Monthly Subscription
         self.user.update_attribute(:subscribed, false)
         self.user.update_attribute(:subscription_stage, 0)
-        self.user.update_attribute(:subscription_frequency, "") 
+        self.user.update_attribute(:subscription_frequency, "")
         self.user.donations.all.each do |donation|
-          donation.update_attribute(:subscription_status, "completed") if donation.subscription_status == "active" 
-        end 
+          donation.update_attribute(:subscription_status, "completed") if donation.subscription_status == "active"
+        end
         #completed_subscription = Subscription.find_by!(id: self.subscription_id)
-        this_donations_subscription.update_attribute(:status, "completed") 
+        this_donations_subscription.update_attribute(:status, "completed")
       end
     elsif self.amount == 200 && self.donation_type == "subscription"
       # Stop Yearly Subscription
-      EndYearlySubscriptionJob.set(wait: 1.year).perform_later(self)
+      EndYearlySubscriptionJob.set(wait: 2.minutes).perform_later(self)
     end
-    
+
   end
 
   def send_payment_complete_email
