@@ -68,4 +68,6 @@ rails s
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 
