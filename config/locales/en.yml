@@ -1,0 +1,362 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  meta_title: "FundMe - Funding for Your Projects"
+  meta_description: "FundMe is a subscription service that provides attorneys for members' deportation hearings." 
+  # signups
+  login: "Log In"
+  log_out: "Log Out"
+  username: "username"
+  email: "email"
+  forgot_your_password?: "Forgot your password?"
+  send_me_reset_password_instructions: "Send me reset password instructions"
+  send: "send"
+  optional: "optional"
+  6_characters_minimum: "6 character minimum"
+  first_name: "first name"
+  last_name: "last name"
+  other_names: "other names"
+  # sections
+  sections: "sections"
+  about: "About"
+  stories: "Stories"
+  # User information
+  email: "email"
+  user_number: "User Number"
+  user_id: "User ID"
+  active_subscriptions: "Active Subscriptions"
+  language: "Language"
+  none: "None"
+  # buttons
+  donate: "donate"
+  user_page: "user page"
+  # contact form
+  Name: "Name..."
+  Email_Address: "Email Address..."
+  Subject: "Subject..."
+  Message: "Message..."
+  Send: "Send"
+  address: "Address"
+  immigration_law: "immigration law"
+  contact: "contact"
+  login_sign_up: "log in / sign up"
+  sign_up: "sign up"
+  contact_us: "contact us"
+  # donations
+  total_donations: "donations"
+  make_a_donation: "Make a donation"
+  make_a_new_donation: "Make a new donation"
+  $sum_/_month: "$20 / MONTH"
+  $sum_/_year: "$200 / YEAR"
+  this_payment_is_for_one_month: "This payment is for one month"
+  this_payment_is_for_one_year: "This payment is for one year"
+  total_to_date: "Total To Date"
+  one_time_donation: "ONE TIME DONATION"
+  any_information_of_yours: "Any information of yours will never be shared.You can donate with a credit or debit card. We also accept prepaid visa cards (Walmart) and gift cards.(cards without an address) if you would prefer that. We operate in United States Federal Court, Southern District of Florida"
+  # donation history
+  donation_history: "donation history"
+  payment_time: "Time"
+  stripe_payment_reference: "Stripe Payment Reference"
+  amount: "Amount"
+  type: "Type"
+  status: "Status"
+  subscription: "subscription"
+  pages:
+    home:
+      donate: "donate"
+      providing_lawyers: "Providing attorneys for those facing deportation."
+      undocumented?: "Undocumented?"
+      if_you_are_undocumented: "If you are undocumented and you are arrested you will be subject to deportation (removal)." 
+      the_us_government: "The U.S. government will not provide a lawyer for your deportation hearing. To hire a lawyer will cost you anywhere from 3-10 thousand dollars. "
+      we_raise_funds: "We raise funds for the sole purpose of hiring attorneys for representation at deportation proceedings. This includes master calender hearing and merits hearing. At this time we can only accommodate residents of Miami-Dade, Broward and Palm Beach counties."
+      we_raise_funds_in_five_ways: "We raise funds in five ways:"
+      donations_from_people_who_share_our_views: "Donations from people who share our views"
+      donations_from_people_who_attend_our_fundraisers: "Donations from people who attend our fundraisers."
+      individuals_who_make_monthly_donations: "Individuals who make monthly donations."
+      attorneys_who_are_willing_to_work_partially_pro-bono: "Attorneys who are willing to work partially pro-bono"
+      our_personal_funds: "Our personal funds."
+      for_a_small_monthly_donation: "For a small monthly donation you can become a member of the deportation defense fund and be protected with an attorney at no extra cost to you."
+      immigration_law: "Immigration Law"
+      becoming_a_fundme_member: "Becoming A FundMe Member"
+      we_will_never_ask: "We will never ask for your address or location. We do not want to know, in case any authorities ever ask us. Giving your e mail is optional and not required during signup or donation payments."
+      we_will_never_ask_for_your_address: "We will never ask for your address or location. Giving your e mail is optional and not required during signup or donation payments."
+      follow_these_steps_to_make_donations: "Follow these steps to make donations:"
+      purchase_a_$20_prepaid: "Purchase a $20 prepaid visa card (wallmart, target, CVS, wallgreens, etc.). The card costs $5 -you may want to put $100 on the card and use it five times so you don’t have to buy 5 cards. (Do not buy a rechargeable card as then they want information from you)."
+      go_to_donation_page: "Go to donation page of website and become a monthly or yearly donor."
+      check_your_member_number: "Check your member number and emergency phone number. Write this information down and give it to someone you trust."
+      dont_forget: "Don't forget donations every month or membership will lapse."
+      if_you_are_arrested: "If you are arrested by ICE, call our bilingual emergency number and give your member number and details of arrest and location."
+      fundme_will_use: "FundMe will use all resources of Deportation Defense Fund to get you a good immigration lawyer at no cost."
+      legal_support: "Legal Support"
+      all_attorneys_that_work_with_us: "All attorneys that work with us are bilingual."
+      we_are_against_the_breakup: "We are against the breakup of families and we strive to assist anyone in this unfortunate situation, but our monthly donors have priority. Donors on monthly plans can be assured that they will have all the resources of Deportation Defense Fund to find an attorney either immediatly after an arrest or before any deportation proceedings. Those who are arrested on a criminal charge will recieve a lawyer from the government for their criminal case only. Our attorneys will work with your criminal attorney to examine the best way to handle your immigration status. All attorneys that work with us are bilingual. We are constantly sending emails to our south florida congressional representatives, to have them pass legislation to provide attorneys for immigrants. We urge you to do the same."
+      # video stories
+      jorge_garcia_and_his_family_speak_out: "Jorge Garcia And His Family Speak Out"
+      the_undocumented_father: "The undocumented father of two and his family share their experience."
+      soccer_star_deported: "Soccer Star Deported"
+      lizandro_Claros-Saravia: "Lizandro Claros-Saravia Deported After Reporting Scholarship To ICE"
+      OITNB_actress_speaks_out: "'OITNB' actress speaks out about family's deportation"
+      actress_Diane_Guerrero: "Actress Diane Guerrero speaks about her family's deportation from the U.S. to Colombia."
+  donations:
+    new:
+      make_your_donation: "Make Your Donation!"
+      this_is_a_one_time_donation: "This is a one time donation"
+      this_is_a_20_dollar_subscription: "This is a $20 / month donation"
+      this_is_a_200_dollar_subscription: "This is a $200 / year donation"
+      please_enter_the_donation_amount: "Please enter the donation amount in the number box"
+      payments_are_accepted_with: "Payments are accepted with (prepaid) Visa, Mastercard, China UnionPay and many more card brands."
+      card_payments_are: "Card payments are processed through Stripe. Email submission is not necessary. Please check your user login page for Stripe transaction details."
+      active_subscriptions: "Active subscriptions"
+      total_contributions_to_date: "Total contributions to date"
+    show: 
+      user_name: "User Name"
+      user_number: "User Number"
+      user_id: "User ID"
+      donation_type: "Donation type"
+      donation_amount: "Donation amount"
+      donation_time: "Donation time"
+      stripe_payment_reference: "Stripe Payment Reference"
+      active_subscriptions: "Active Subscriptions"
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Validation failed: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Cannot delete record because a dependent %{record} exists
+          has_many: Cannot delete record because dependent %{record} exist
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: about 1 hour
+        other: about %{count} hours
+      about_x_months:
+        one: about 1 month
+        other: about %{count} months
+      about_x_years:
+        one: about 1 year
+        other: about %{count} years
+      almost_x_years:
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      less_than_x_minutes:
+        one: less than a minute
+        other: less than %{count} minutes
+      over_x_years:
+        one: over 1 year
+        other: over %{count} years
+      x_seconds:
+        one: 1 second
+        other: "%{count} seconds"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_days:
+        one: 1 day
+        other: "%{count} days"
+      x_months:
+        one: 1 month
+        other: "%{count} months"
+      x_years:
+        one: 1 year
+        other: "%{count} years"
+    prompts:
+      second: Second
+      minute: Minute
+      hour: Hour
+      day: Day
+      month: Month
+      year: Year
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      confirmation: doesn't match %{attribute}
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      less_than: must be less than %{count}
+      less_than_or_equal_to: must be less than or equal to %{count}
+      model_invalid: 'Validation failed: %{errors}'
+      not_a_number: is not a number
+      not_an_integer: must be an integer
+      odd: must be odd
+      other_than: must be other than %{count}
+      present: must be blank
+      required: must exist
+      taken: has already been taken
+      too_long:
+        one: is too long (maximum is 1 character)
+        other: is too long (maximum is %{count} characters)
+      too_short:
+        one: is too short (minimum is 1 character)
+        other: is too short (minimum is %{count} characters)
+      wrong_length:
+        one: is the wrong length (should be 1 character)
+        other: is the wrong length (should be %{count} characters)
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Billion
+          million: Million
+          quadrillion: Quadrillion
+          thousand: Thousand
+          trillion: Trillion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ", and "
+      two_words_connector: " and "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm

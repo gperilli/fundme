@@ -1,0 +1,46 @@
+
+
+<div style="position: relative; width: 100%; height: auto; min-height: 100vh; margin-bottom: 20px; float: left;">
+<div class="devisebackground" style="position: absolute;">
+</div>
+
+<div style="width: 100%; height: auto; position: relative; padding-top: 5rem;">
+  <div class="container px-4 px-lg-5">
+    <h2 class="devise-titles">Change your password</h2>
+
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="field">
+        <%= f.label :password, "New password", class: "form-label" %><br />
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+        <% end %>
+        <div class="col-md-6 mb-4">
+          <div class="md-form mb-0">
+            <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirm new password", class: "form-label" %><br />
+        <div class="col-md-6 mb-4">
+          <div class="md-form mb-0">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Change my password", class: "btn btn-primary mb-2 fundme-submit" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+
+  </div>
+</div>
+</div>

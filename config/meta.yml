@@ -1,0 +1,5 @@
+meta_product_name: "FundMe"
+meta_title: "FundMe - Funding for Your Projects"
+meta_description: "Use FundMe to procure funding through Stripe."
+meta_image: "/og-share-image.png" # should exist in `app/assets/images/`
+twitter_account: "@fundme"   # required for Twitter Cards

@@ -1,0 +1,148 @@
+ <!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-backfade" id="mainNav" style="border-bottom: 0px solid #eee;">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href=
+            <% if params[:controller] == "pages" && params[:action] == "home" %>
+                <%= "#page-top" %>
+            <% else %>
+                <%= "/" %>
+            <% end %>>
+                fundme
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+            <% if params[:controller] == "pages" && params[:action] == "home" %>
+                <!-- <li class="nav-item"><a class="nav-link" href="#about"><%= t("about") %></a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" href="#immigrationlaw"><%= t("immigration_law") %></a></li> -->
+                <!--<li class="nav-item"><a class="nav-link" href="#contactus"><%= t("contact") %></a></li>  -->
+
+            <% end %>
+                <% if user_signed_in? %>
+                    <li class="nav-item">
+                        <%= link_to current_user, class: "nav-link", style: ""  do %>
+                            <i class="fa-solid fa-circle-user" style="margin-right: 5px;"></i><%= current_user.username %>
+                            <%# raise %>
+                        <% end %>
+                    </li>
+
+                    <li class="nav-item">
+                        <%= link_to destroy_user_session_path, method: :delete, class: "nav-link", style: ""  do %>
+                            <i class="fa-solid fa-right-from-bracket" style="margin-right: 5px;"></i><span id="logout-text"><%= t("log_out") %></span>
+                        <% end %>
+                    </li>
+                <% else %>
+                    <!-- <li class="nav-item">  -->
+                        <%= link_to new_user_session_path, class: "nav-link", style: ""  do %>
+                            <i class="fa-solid fa-circle-user"></i> <%= t("login_sign_up") %>
+                        <% end %>
+                    <!-- </li>  -->
+                <% end %>
+
+
+                <!-- New dropdown -->
+                <li class="nav-item" style="float: right; display: inline-block; position: relative; min-width: 180px;">
+                    <ul id="mobile-language-select" class="mobile-language-select" style="">
+                        <li style="margin-left: 0px; float: left;">
+                            <a class="nav-link" ><%= t("sections") %></a>
+                        </li>
+
+                        <% if params[:controller] == "pages" && params[:action] == "home" %>
+                            <li><a class="nav-link" href="#about"><%= t("about").capitalize %></a></li>
+                            <li><a class="nav-link" href="#donate"><%= t("donate").capitalize %></a></li>
+                        <% else %>
+                            <li><a class="nav-link" href="/donations/new"><%= t("donate").capitalize %></a></li>
+                        <% end %>
+
+
+
+                        <% Fmpage.all.each do |page| %>
+                            <% if page.is_published? %>
+                                <% if page.title == "home" %>
+                                    <li><a class="nav-link" href="/?lang=<%= I18n.locale.to_s %>"><%= page[I18n.locale].capitalize %></a></li>
+                                    <%# raise %>
+                                <% else %>
+                                    <li><a class="nav-link" href="/fmpages/<%= page.title %>?lang=<%= I18n.locale.to_s %>"><%= page[I18n.locale].capitalize %></a></li>
+                                <% end %>
+
+                            <% end %>
+                        <% end %>
+                        <% if params[:controller] == "pages" && params[:action] == "home" %>
+                            <li><a class="nav-link" href="#contactus"><%= t("contact").capitalize %></a></li>
+                        <% else %>
+                            <li><a class="nav-link" href="/?lang=<%= I18n.locale.to_s %>#contactus"><%= t("contact").capitalize %></a></li>
+                        <% end %>
+
+                    </ul>
+
+                    <!-- custom dropdown -->
+                        <!-- position fixed square -->
+                        <div id="dropdown-language-select" class="ro-button-useroptions-inner-container">
+                            <a class="dropdown-item nav-link"><%= t("sections").capitalize %>:</a>
+                            <ul id="useroptions-dropdown-menu" class="ro-button-useroptions-cssdropdown-content ddNavDropDownMenus" style="padding-left: 0px; float: left; text-align: left;">
+
+                                <% if params[:controller] == "pages" && params[:action] == "home" %>
+                                    <li><a class="dropdown-item" href="#about"><%= t("about").capitalize %></a></li>
+                                    <li><a class="dropdown-item" href="#donate"><%= t("donate").capitalize %></a></li>
+                                <% else %>
+                                    <li><a class="dropdown-item" href="/donations/new"><%= t("donate").capitalize %></a></li>
+                                <% end %>
+                                    <% Fmpage.all.each do |page| %>
+                                    <% if page.is_published? %>
+                                        <% if page.title == "home" %>
+                                            <li><a class="dropdown-item" href="/?lang=<%= I18n.locale.to_s %>"><%= page[I18n.locale].capitalize %></a></li>
+                                        <% else %>
+                                            <li><a class="dropdown-item" href="/fmpages/<%= page.title %>?lang=<%= I18n.locale.to_s %>"><%= page[I18n.locale].capitalize %></a></li>
+                                        <% end %>
+
+                                    <% end %>
+                                <% end %>
+                                <% if params[:controller] == "pages" && params[:action] == "home" %>
+                                    <li><a class="dropdown-item" href="#contactus"><%= t("contact").capitalize %></a></li>
+                                <% else %>
+                                    <li><a class="dropdown-item" href="/?lang=<%= I18n.locale.to_s %>#contactus"><%= t("contact").capitalize %></a></li>
+                                <% end %>
+
+                            </ul>
+                            <!-- button is z-indexed above everything else and given 0 opacity -->
+                            <div id="useroptions-dropdown" class="ro-button-useroptions-cssdropbtn dropdown-button"></div>
+                        </div>
+                </li>
+
+
+                <!-- old dropdown -->
+                <li class="nav-item" style="float: right; display: inline-block; position: relative;">
+                        <% languages = ["en", "es", "pt"] %>
+                        <% languages.delete(I18n.locale.to_s) %>
+                        <%# raise %>
+                    <ul id="mobile-language-select" class="mobile-language-select" style="">
+                        <li style="margin-left: 0px; float: left;">
+                            <a class="nav-link" ><i class="fa-solid fa-globe" style=""></i><%= I18n.locale %></a>
+                        </li>
+                        <%# raise %>
+                        <li><a class="nav-link" href="<%= request.path %>?lang=<%= languages[0] %>" ><i class="fa-solid fa-globe"></i><%= languages[0] %></a></li>
+                        <li><a class="nav-link" href="<%= request.path %>?lang=<%= languages[1] %>" ><i class="fa-solid fa-globe"></i><%= languages[1] %></a></li>
+                        <!-- <li><a class="nav-link" href="<%= request.path %>?lang=<%= languages[2] %>" ><i class="fa-solid fa-globe"></i><%= languages[2] %></a></li> -->
+                    </ul>
+
+                    <!-- custom dropdown -->
+                    <!-- position fixed square -->
+                    <div id="dropdown-language-select" class="ro-button-useroptions-inner-container">
+                        <a class="dropdown-item nav-link"><i class="fa-solid fa-globe"></i><%= I18n.locale %></a>
+                        <ul id="lang_options-dropdown-menu" class="ro-button-useroptions-cssdropdown-content ddNavDropDownMenus" style="padding-left: 0px;">
+                            <li><a class="dropdown-item" href="<%= request.path %>?lang=<%= languages[0] %>"><i class="fa-solid fa-globe"></i><%= languages[0] %></a></li>
+                            <li><a class="dropdown-item" href="<%= request.path %>?lang=<%= languages[1] %>"><i class="fa-solid fa-globe"></i><%= languages[1] %></a></li>
+                            <!-- <li><a class="dropdown-item" href="<%= request.path %>?lang=<%= languages[2] %>"><i class="fa-solid fa-globe"></i><%= languages[2] %></a></li> -->
+                        </ul>
+                        <!-- button is z-indexed above everything else and given 0 opacity -->
+                        <div id="" class="ro-button-useroptions-cssdropbtn dropdown-button"></div>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

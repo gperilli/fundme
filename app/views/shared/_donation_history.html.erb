@@ -1,0 +1,55 @@
+<section class="account-section text-center pb-5 bg-light" id="about" style="padding-top: 0rem;">
+    <div class="container px-4 px-lg-5" style=";">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-12  mb-md-0 my-3">
+                <div class="card py-4 h-100" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h4 class="text-uppercase m-0"><%= t("donation_history") %></h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50 text-start">
+                            <% if @user.donations.count == 0 %>
+                                <%= "No donations made so far" %>
+                            <% else %>
+                                <div style="overflow-x:auto;">
+                                    <table>
+                                        <tr class="spaceUnder">
+                                            <th><%= t("payment_time") %></th>
+                                            <th><%= t("stripe_payment_reference") %></th>
+                                            <th><%= t("amount") %></th>
+                                            <th><%= t("type") %></th>
+                                            <th><%= t("status") %></th>
+                                        </tr>
+                                        <% @user.donations.all.sort_by { |h| h[:created_at] }.reverse.each do |donation| %>
+                                            <%# @user.donations.all.reverse.each do |donation| %>
+                                                <%# if donation.donation_type == "one_time" %>
+                                                    <tr class="spaceUnder">
+                                                        <td><%= donation.created_at %></td>
+                                                        <td><%= donation.stripe_payment_id %></td>
+                                                        <td><%= "$#{donation.amount}" %></td>
+                                                        <td>
+                                                            <% if donation.donation_type == "monthly_subscription" || donation.donation_type == "yearly_subscription" || donation.donation_type == "automated" %>
+                                                                <% if donation.amount == 20 %>
+                                                                    <%= "#{@user.subscription_frequency.capitalize} #{t("subscription")} #{donation.subscription_set_number} / 12" %>
+                                                                <% else %>
+                                                                    <%= "#{@user.subscription_frequency.capitalize} #{t("subscription")} 1 / 1" %>
+                                                                <% end %>
+                                                            <% else %>
+                                                                <%= "one time payment" %>
+                                                            <% end %>
+                                                        </td>
+                                                        <td><%= donation.status %></td>
+                                                    </tr>
+                                            <%# end %>
+                                        <% end %>
+                                    </table>
+                                </div>
+                            <% end %>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

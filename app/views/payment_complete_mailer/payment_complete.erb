@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Donation Payment Made At <a href="https://www.fundme.org" target="_blank">www.fundme.org</a></h1>
+    <p>Your donation was made just now at fundme.org. Here are the details:</p>
+    <ul>
+      <li>User name: <%= @donation.user.username %></span>
+      <li>User number: <%= @donation.user.user_number %></span>
+      <li>Amount: $<%= @donation.amount %></li>
+      <li>Type of payment:
+        <% if @donation.donation_type == "subscription" || @donation.donation_type == "automated" %>
+            <% if @donation.amount == 20 %>
+                <%= "#{@donation.user.subscription_frequency.capitalize} #{t("subscription")} #{@donation.subscription_set_number} / 12" %>
+            <% else %>
+                <%= "#{@donation.user.subscription_frequency.capitalize} #{t("subscription")} 1 / 1" %>
+            <% end %>
+        <% else %>
+            <%= "one time payment" %>
+        <% end %>
+      </li>
+      <li>Time: <%= @donation.created_at %></li>
+      <li>Stripe payment reference: <%= @donation.stripe_payment_id %></li>
+    </ul>
+
+    <p>Thanks very much <%= @donation.user.first_name %>.</p>
+    <img src="https://www.gperilli.dev/images/ogimages/fundme-og-share-image.png" style="width: 100%;" alt="FundMe logo">
+  </body>
+</html>

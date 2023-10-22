@@ -1,0 +1,179 @@
+<!-- Userhead-->
+<header class="userhead" style="padding-top: 5rem;">
+  <!-- Account Information -->
+  <section
+    class="account-section text-center"
+    id="about"
+    style="padding-top: 0rem; height: 100%;"
+  >
+    <div
+      class="container px-4 px-lg-5"
+      style="position: relative; display: flex; width: 100%; height: 100%; flex-direction: row; align-items: end; justify-content: end;"
+    >
+
+      <div
+        class="row gx-4 gx-lg-5"
+        style="flex-grow: 1; align-self: center; justify-self: center;"
+      >
+        <div class="col-md-8 mb-md-0 my-3">
+          <div
+            class="card py-4 h-100"
+            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+          >
+            <div class="card-body text-center">
+              <i class="fa-solid fa-user-check"></i>
+              <h4 class="text-uppercase m-0"><%= current_user.username %></h4>
+              <hr class="my-4 mx-auto"/>
+              <div class="small text-black-50 text-start">
+
+                <span><%= t("email").capitalize %>:
+                  <%= "no email entered" if @user.email.blank? %><%= @user.email if @user.email.present? %></span><br>
+                <span><%= t("user_number") %>:
+                  <%= @user.user_number %></span><br>
+                <span><%= t("user_id") %>:
+                  <%= @user.uid %></span><br>
+
+                <form name="languageForm">
+                  <span><%= t("language") %>:</span>
+                  <input
+                    style="display: inline-block;"
+                    type="radio"
+                    id="html"
+                    name="language"
+                    value="es"
+                    <%= "checked" if @user.language == "es" %>
+                  >
+                  <label style="display: inline-block;" for="es">Espanol</label>
+                  <input
+                    style="display: inline-block;"
+                    type="radio"
+                    id="css"
+                    name="language"
+                    value="cr"
+                    <%= "checked" if @user.language == "cr" %>
+                  >
+                  <label style="display: inline-block;" for="cr">Crioulo</label>
+                  <input
+                    style="display: inline-block;"
+                    type="radio"
+                    id="javascript"
+                    name="language"
+                    value="pt"
+                    <%= "checked" if @user.language == "pt" %>
+                  >
+                  <label style="display: inline-block;" for="pt">Português</label>
+                  <input
+                    style="display: inline-block;"
+                    type="radio"
+                    id="javascript"
+                    name="language"
+                    value="en"
+                    <%= "checked" if @user.language == "en" %>
+                  >
+                  <label style="display: inline-block;" for="en">English</label>
+                </form>
+
+                <span><%= t("active_subscriptions") %>:
+                  <% if @user.subscribed == false %>
+                    <%= t("none") %>
+                  <% else %>
+                    <% subscription_amount = @user.donations.find_by(subscription_status: 'active').amount %>
+                    $<%= subscription_amount %>
+                    <%= subscription_amount == 20 ? "/ month" : "/ year" %>
+                    <div style="width: 100%; padding-top: 20px;">
+                      <button class="btn btn-danger mb-2 fundme-button-link" id="cancel-subscription">cancel subscription</button>
+                    </div>
+                  <% end %>
+
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-md-0 my-3">
+          <div
+            class="card py-4 h-100"
+            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+          >
+            <div class="card-body text-center">
+              <i class="fa-regular fa-credit-card"></i>
+              /
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <h4 class="text-uppercase m-0"><%= t("total_donations") %></h4>
+              <hr class="my-4 mx-auto"/>
+              <div class="small text-black-50"><%= t("total_to_date") %></div>
+
+              <span>$<%= current_user.total_donations %></span>
+              <div style="width: 100%; padding-top: 20px;">
+                <a class="btn btn-primary mb-2 fundme-button-link" href="#donate"><%= t("donate") %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</header>
+<!-- Donation Section -->
+<%= render 'shared/donation' %>
+<!-- Donation History -->
+<%= render 'shared/donation_history' %>
+
+<script>
+var rad = document.languageForm.language;
+var prev = null;
+for (var i = 0; i < rad.length; i++) {
+    rad[i].addEventListener('change', function() {
+        //(prev) ? console.log(prev.value): null;
+        if (this !== prev) {
+            prev = this;
+        }
+        console.log(this.value)
+        let lang = this.value
+        fetch('/users/update', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                authenticity_token: '<%= form_authenticity_token %>',
+                user: {
+                language: lang,
+                }
+            }),
+        })
+        .then(response => {
+            console.log(lang);
+            window.location = '/users/<%= @user.id %>?lang=${lang}';
+            console.log(window.location);
+            window.location.reload();
+        })
+
+    });
+}
+
+document.querySelector("#cancel-subscription").addEventListener("click", function() {
+    console.log("cancel function")
+
+    fetch('/users/cancel_subscription', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            authenticity_token: '<%= form_authenticity_token %>',
+            //user: {
+            //language: lang,
+            //}
+        }),
+    })
+    .then(response => {
+        console.log(window.location);
+        window.location.reload();
+    })
+
+})
+</script>

@@ -1,0 +1,159 @@
+<!-- Masthead-->
+<header class="masthead">
+  <div
+    class="
+      container
+      px-4
+      px-lg-5
+      d-flex
+      h-100
+      align-items-center
+      justify-content-center
+    "
+  >
+    <div class="d-flex justify-content-center">
+      <div class="text-center">
+        <h1 class="mx-auto my-0 text-uppercase">FUNDME</h1>
+        <li class="mb-5">
+          <a class="text-white-50 mx-auto mt-2 px-1" href="/?lang=en">English</a>
+          <a class="text-white-50 mx-auto mt-2 px-1" href="/?lang=es">Espanol</a>
+          <a class="text-white-50 mx-auto mt-2 px-1" href="/?lang=pt">Português</a>
+          <%  %>
+        </li>
+        <h2 class="text-white-50 mx-auto mt-2 mb-2"><%= @sitewide_text_items.find_by(name: "tag line")[I18n.locale.to_s] %></h2>
+        <a class="btn btn-primary mb-2 fundme-button-link" href="#donate"><%= t("donate") %></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- About-->
+<section class="about-section text-start mb-5" id="about">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-start">
+      <div class="col-lg-8">
+        <div class="ddhome_page_text_blocks">
+          <h2>About Us</h2>
+          <% @fm_home_page_text_blocks.each do |text_block| %>
+            <p style="">
+              <%= raw text_block[I18n.locale.to_s] %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Donation Section -->
+<%= render 'shared/donation' %>
+<!-- Contact Us -->
+<section class="signup-section" id="contactus">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5">
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <h2
+          class="text-uppercase mb-5 green-titles"
+          style="text-shadow: #fff 1px 0 10px;"
+        ><%= t("contact_us") %></h2>
+        <form action="/send_contact" method="post" class="form-signup" id="contactForm">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <!-- Email address input--> <!-- name -->
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="md-form mb-0">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control fundme-form-input"
+                  placeholder="<%= t("Name")%>"
+                  aria-label="Name..."
+                >
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="md-form mb-0">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  class="form-control fundme-form-input"
+                  placeholder="<%= t("Email_Address")%>."
+                  aria-label="Email address..."
+                >
+              </div>
+            </div>
+            <div class="col-md-12 mb-4">
+              <div class="md-form mb-0">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-control fundme-form-input"
+                  placeholder="<%= t("Subject")%>"
+                  aria-label="Subject..."
+                >
+              </div>
+            </div>
+            <div class="col-md-12 mb-4">
+              <div class="md-form">
+                <textarea
+                  type="text"
+                  id="message"
+                  name="message"
+                  rows="2"
+                  class="form-control"
+                  style=""
+                  placeholder="<%= t("Message")%>"
+                  aria-label="Message..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-auto">
+              <input
+                class="btn btn-primary mb-5 mt-5 fundme-submit"
+                id="submitButton"
+                type="submit"
+                value=<%= t("Send") %>
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact-->
+<section class="contact-section bg-black">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 d-flex justify-content-center">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0"><%= t("about") %></h4>
+            <hr class="my-4 mx-auto"/>
+            <div class="small text-black-50">FundMe - A Funding Web App Using Stripe Payments</div>
+            <div class="small text-black-50"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-envelope text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Email</h4>
+            <hr class="my-4 mx-auto"/>
+            <div class="small text-black-50"><a href="#!">info@fundme.com</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="social d-flex justify-content-center">
+      <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+      <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</section>

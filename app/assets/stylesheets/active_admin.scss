@@ -1,0 +1,55 @@
+// Sass variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+// Overriding any non-variable Sass must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+// Active Bootstrap
+//@import "active_bootstrap_skin";
+
+
+
+
+
+.formtastic fieldset > ol >li.radio fieldset ol li {
+    margin:0.1em 0.5em 0.5em 0;
+    display: inline-block;
+  }
+
+.aa-button {
+  border-radius: 200px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.0em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 12px;
+    margin-right: 3px;
+    padding: 7px 16px 6px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF, #E7E7E7);
+   /** box-shadow: 0 1px 1px rgb(0, 0, 0 / 10%), 0 1px 0 0 rgb(255, 255, 255 / 80%) inset; **/
+    border: solid 1px #c7c7c7;
+    border-color: #c7c7c7;
+    border-top-color: #d3d3d3;
+    border-right-color: #c7c7c7;
+    border-bottom-color: #c2c2c2;
+    border-left-color: #c7c7c7;
+    text-shadow: #fff 0 1px 0;
+    color: #5E6469;
+    padding: 12px 17px 10px;
+    margin: 0px;
+}
+

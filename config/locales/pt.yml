@@ -1,0 +1,335 @@
+
+
+pt:
+  meta_title: "FundMe - Apoio jurídico para aqueles que enfrentam deportação"
+  meta_description: "FundMe é um serviço de assinatura que fornece advogados para audiências de deportação de membros."  
+  # signups
+  login: "conecte-se"
+  log_out: "sair"
+  username: "nome de usuário"
+  email: "email"
+  forgot_your_password?: "Esqueceu sua senha?"
+  send_me_reset_password_instructions: "Envie-me instruções de redefinição de senha"
+  send: "mandar"
+  optional: "opcional"
+  6_characters_minimum: "mínimo de 6 caracteres"
+  first_name: "primeiro nome"
+  last_name: "últimos nomes"
+  other_names: "outros nomes"
+  # sections
+  sections: "seções"
+  about: "Sobre"
+  stories: "Histórias"
+  # User information
+  email: "email"
+  user_number: "Número do Usuário"
+  user_id: "ID do usuário"
+  active_subscriptions: "Assinaturas Ativas"
+  language: "Linguagem"
+  none: "Nenhum"
+  # buttons
+  donate: "doar"
+  user_page: "página do usuário"
+  # contact form
+  Name: "Nome..."
+  Email_Address: "Endereço de email..."
+  Subject: "Sujeito..."
+  Message: "Mensagem..."
+  Send: "Mandar"
+  address: "Endereço"
+  immigration_law: "Lei de imigração"
+  contact: "contato"
+  login_sign_up: "conecte-se / inscrever-se"
+  sign_up: "inscrever-se"
+  contact_us: "Contate-Nos"
+  # donations
+  total_donations: "doações"
+  make_a_donation: "Faça uma doação"
+  make_a_new_donation: "Fazer uma nova doação"
+  $sum_/_month: "$20 / MÊS"
+  $sum_/_year: "$200 / ANO"
+  this_payment_is_for_one_month: "Este pagamento é para um mês."
+  this_payment_is_for_one_year: "Este pagamento é por um ano."
+  total_to_date: "Total até a data"
+  one_time_donation: "DOAÇÃO ÚNICA"
+  any_information_of_yours: "Qualquer informação sua nunca será compartilhada. Você pode doar com cartão de crédito ou débito. Também aceitamos cartões pré-pagos Visa (Walmart) e cartões-presente. (cartões sem endereço) se você preferir. Atuamos no Tribunal Federal dos Estados Unidos, Distrito Sul da Flórida."
+  # donation history
+  donation_history: "histórico de doações"
+  payment_time: "Time"
+  stripe_payment_reference: "Referência de pagamento por Stripe"
+  amount: "Resultar"
+  type: "Tipo"
+  status: "Status"
+  subscription: "inscrição"
+  pages:
+    home:
+      donate: "doar"
+      providing_lawyers: "Fornecer advogados para aqueles que enfrentam deportação."
+      undocumented?: "Não documentado?"
+      if_you_are_undocumented: "Se você não tiver documentos e for preso, estará sujeito a deportação (remoção)." 
+      the_us_government: "o governo dos eua não fornecerá um advogado para sua audiência de deportação. contratar um advogado custará em qualquer lugar de 3 a 10 mil dólares."
+      we_raise_funds: "Arrecadamos fundos com o único propósito de contratar advogados para representação em processos de deportação. Isso inclui audiência de calendário mestre e audiência de mérito. Neste momento, só podemos acomodar residentes dos condados de Miami-Dade, Broward e Palm Beach."
+      we_raise_funds_in_five_ways: "Arrecadamos fundos de cinco maneiras;"
+      donations_from_people_who_share_our_views: " Doações de pessoas que compartilham nossos pontos de vista."
+      donations_from_people_who_attend_our_fundraisers: "Doações de pessoas que participam de nossas campanhas de arrecadação de fundos."
+      individuals_who_make_monthly_donations: "Pessoas físicas que fazem doações mensais."
+      attorneys_who_are_willing_to_work_partially_pro-bono: "Advogados que estejam dispostos a trabalhar parcialmente pro-bono."
+      our_personal_funds: "Nossos fundos pessoais."
+      for_a_small_monthly_donation: "Por uma pequena doação mensal você pode se tornar membro do fundo de defesa de deportação."
+      immigration_law: "Lei de Imigração"
+      becoming_a_fundme_member: "Torne-se um membro do Fundme"
+      we_will_never_ask: "Nunca pediremos seu endereço ou localização. Não queremos saber, caso alguma autoridade nos pergunte. Fornecer seu e-mail é opcional e não obrigatório."
+      we_will_never_ask_for_your_address: "Nunca pediremos seu endereço ou localização. Fornecer seu e-mail é opcional e não é obrigatório durante os pagamentos de inscrição ou doação."
+      follow_these_steps_to_make_donations: "Siga estes passos para fazer doações:"
+      purchase_a_$20_prepaid: "Compre um cartão Visa pré-pago de $20 (wallmart, target, CVS, wallgreens, etc.). O cartão custa $ 5 - você pode colocar $ 100 no cartão e usá-lo cinco vezes para não precisar comprar 5 cartões. (Não compre um cartão recarregável, pois eles querem informações de você)"
+      go_to_donation_page: "Acesse a página de doação do site e torne-se um doador mensal ou anual."
+      check_your_member_number: "Você receberá seu número de membro e número de telefone de emergência. Anote essas informações e entregue a alguém de sua confiança."
+      dont_forget: "Não se esqueça de fazer isso todos os meses ou a assinatura será cancelada."
+      if_you_are_arrested: "Se você for preso pelo ICE, ligue para nosso número de emergência bilíngue e forneça seu número de membro e detalhes da prisão e localização."
+      fundme_will_use: "Usaremos todos os recursos do Deportation Defense Fund para conseguir um bom advogado de imigração sem nenhum custo."
+      legal_support: "Suporte legal"
+      all_attorneys_that_work_with_us: "Todos os advogados que trabalham conosco são bilíngües."
+      we_are_against_the_breakup: "Somos contra a separação das famílias. Nós nos esforçamos para ajudar qualquer pessoa nessa situação infeliz, mas nossos doadores mensais têm prioridade. Os doadores em planos mensais podem ter certeza de que terão todos os recursos do Deportation Defense Fund para encontrar um advogado imediatamente após a prisão ou antes de qualquer processo de deportação. Aqueles que são presos sob acusação criminal receberão um advogado do governo apenas para seu caso criminal. Nossos advogados trabalharão com seu advogado criminal para examinar a melhor maneira de lidar com seu status de imigração. Todos os advogados que trabalham conosco são bilíngües. Estamos constantemente enviando e-mails para nossos representantes no Congresso do sul da Flórida, para que eles aprovem legislação para fornecer advogados para imigrantes. Exortamos você a fazer o mesmo."
+      # video stories
+      jorge_garcia_and_his_family_speak_out: "Jorge Garcia e sua família falam"
+      the_undocumented_father: "O pai indocumentado de dois filhos e sua família compartilham sua experiência."
+      soccer_star_deported: "Estrela de Futebol Deportada"
+      lizandro_Claros-Saravia: "Lizandro Claros-Saravia é deportado após apresentar bolsa ao ICE"
+      OITNB_actress_speaks_out: "Atriz de 'OITNB' fala sobre deportação de família"
+      actress_Diane_Guerrero: "A atriz Diane Guerrero fala sobre a deportação de sua família dos EUA para a Colômbia."
+  donations:
+    new:
+      make_your_donation: "Faça sua doação!"
+      this_is_a_one_time_donation: "Esta é uma doação única"
+      this_is_a_20_dollar_subscription: "Esta é uma doação de $ 20 / mês"
+      this_is_a_200_dollar_subscription: "Esta é uma doação de $ 200 / ano"
+      please_enter_the_donation_amount: "Por favor, insira o valor da doação na caixa de número"
+      payments_are_accepted_with: "Os pagamentos são aceitos com visa (pré-pago), mastercard, China UnionPay e muitas outras marcas de cartão"
+      card_payments_are: "Os pagamentos com cartão são processados ​​através do Stripe. O envio de e-mail não é necessário. Por favor, verifique sua página de login do usuário para detalhes da transação do Stripe."
+      active_subscriptions: "Assinaturas Ativas"
+      total_contributions_to_date: "Total de contribuições até o momento"
+    show: 
+      user_name: "Nome do Usuário"
+      user_number: "Número do Usuário"
+      user_id: "ID do usuário"
+      donation_type: "Tipo de Doação"
+      donation_amount: "Valor da Doação"
+      donation_time: "Tempo de Doação"
+      stripe_payment_reference: "Referência de pagamento por Stripe"
+      active_subscriptions: "Assinaturas Ativas"
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não pode ser eliminado por existir uma dependência de %{record}
+          has_many: Não pode ser eliminado por existirem dependências de %{record}
+  date:
+    abbr_day_names:
+    - dom
+    - seg
+    - ter
+    - qua
+    - qui
+    - sex
+    - sáb
+    abbr_month_names:
+    - 
+    - jan
+    - fev
+    - mar
+    - abr
+    - mai
+    - jun
+    - jul
+    - ago
+    - set
+    - out
+    - nov
+    - dez
+    day_names:
+    - domingo
+    - segunda-feira
+    - terça-feira
+    - quarta-feira
+    - quinta-feira
+    - sexta-feira
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    - 
+    - janeiro
+    - fevereiro
+    - março
+    - abril
+    - maio
+    - junho
+    - julho
+    - agosto
+    - setembro
+    - outubro
+    - novembro
+    - dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      x_months:
+        one: 1 mês
+        other: "%{count} meses"
+      x_years:
+        one: 1 ano
+        other: "%{count} anos"
+    prompts:
+      second: Segundo
+      minute: Minuto
+      hour: Hora
+      day: Dia
+      month: Mês
+      year: Ano
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: tem de ser aceite
+      blank: não pode estar em branco
+      confirmation: não coincide com a confirmação
+      empty: não pode estar vazio
+      equal_to: tem de ser igual a %{count}
+      even: tem de ser par
+      exclusion: é reservado
+      greater_than: tem de ser maior que %{count}
+      greater_than_or_equal_to: tem de ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: é inválido
+      less_than: tem de ser menor que %{count}
+      less_than_or_equal_to: tem de ser menor ou igual a %{count}
+      model_invalid: 'A validação falhou: %{errors}'
+      not_a_number: não é um número
+      not_an_integer: tem de ser um inteiro
+      odd: tem de ser ímpar
+      other_than: tem de ser diferente de %{count}
+      present: não pode estar em branco
+      required: é obrigatório
+      taken: não está disponível
+      too_long: é demasiado grande (o máximo é de %{count} caracteres)
+      too_short: é demasiado pequeno (o mínimo é de %{count} caracteres)
+      wrong_length: comprimento errado (deve ter %{count} caracteres)
+    template:
+      body: 'Por favor, verifique os seguintes campos:'
+      header:
+        one: 1 erro impediu guardar este %{model}
+        other: "%{count} erros impediram guardar este %{model}"
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Criar %{model}
+      submit: Gravar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: mil milhões
+            other: mil milhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: mil biliões
+            other: mil biliões
+          thousand: mil
+          trillion:
+            one: bilião
+            other: biliões
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n %"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%A, %d de %B de %Y, %H:%Mh"
+      long: "%A, %d de %B de %Y, %H:%Mh"
+      short: "%d/%m, %H:%M hs"
+    pm: pm

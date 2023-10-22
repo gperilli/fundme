@@ -1,0 +1,36 @@
+<div style="position: relative; width: 100%; height: auto; min-height: 100vh; margin-bottom: 20px; float: left;">
+  <div class="donationsbackground" style="position: absolute;">
+  </div>
+    <div class="donations-container">
+        <div class="container px-4 px-lg-5">
+            <div style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.4); box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.05); border-radius: 4px; padding: 10px;">
+                <h1 >Donation Completed</h1>
+
+                <p><%= @sitewide_text_items.find_by(name: "donation completed message")[I18n.locale.to_s] %></p>
+                <p>FundMe <%= t(".user_name") %>: <b><%= @donation.user.username %></b></p>
+                <p>FundMe <%= t(".user_number") %>: <b><%= @donation.user.user_number %></b></p>
+                <p>FundMe UUID: <b><%= @donation.user.uid %></b></p>
+                <p>FundMe <%= t(".donation_type") %>: <b><%= @donation.donation_type %></b></p>
+                <p><%= t(".donation_amount") %>: <b><%= @donation.amount %></p>
+                <p><%= t(".donation_time") %>: <b><%= @donation.updated_at %></b></p>
+                <p><%= t(".stripe_payment_reference") %>: <b><%= @donation.stripe_payment_id %></b></p>
+                <p><%= t(".active_subscriptions") %>:
+                    <% if current_user.subscribed == false %>
+                        <%= t("none") %>
+                    <% else %>
+                        <% subscription_amount = @donation.amount %>
+                        $<%= subscription_amount  %>
+                        <%= @donation.donation_type == "monthly_subscription" ? "/ month" : "/ year" %>
+                    <% end %>
+                </p>
+                <br>
+            </div>
+
+            <div style="width: 100%; position: relative; float: left;">
+                <%= link_to current_user, class: "btn btn-primary mb-5 mt-5 fundme-button-link", style: "float: right; " do %>
+                    <span style="color: white;"><%= t("user_page") %> &#8594;</span>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

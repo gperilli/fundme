@@ -1,0 +1,104 @@
+<%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/chart.js' %>
+
+
+
+<%  
+    @twentytwentytwo_signups = []
+    if Time.now >= Date.new(2022, 6, 1)
+        @total_to_july_signups = User.all.where("created_at < ?", Date.new(2022, 7, 1)).count
+        @twentytwentytwo_signups << @total_to_july_signups
+    end  
+    if Time.now >= Date.new(2022, 7, 1)
+        @total_to_august_signups = User.all.where("created_at < ?", Date.new(2022, 8, 1)).count
+        @twentytwentytwo_signups << @total_to_august_signups
+    end
+    if Time.now >= Date.new(2022, 8, 1)
+        @total_to_september_signups = User.all.where("created_at < ?", Date.new(2022, 9, 1)).count
+        @twentytwentytwo_signups << @total_to_september_signups
+    end
+    if Time.now >= Date.new(2022, 9, 1)
+        @total_to_october_signups = User.all.where("created_at < ?", Date.new(2022, 10, 1)).count
+        @twentytwentytwo_signups << @total_to_october_signups
+    end
+    if Time.now >= Date.new(2022, 10, 1)
+        @total_to_november_signups = User.all.where("created_at < ?", Date.new(2022, 11, 1)).count
+        @twentytwentytwo_signups << @total_to_november_signups
+    end
+    if Time.now >= Date.new(2022, 11, 1)
+        @total_to_december_signups = User.all.where("created_at < ?", Date.new(2022, 12, 1)).count
+        @twentytwentytwo_signups << @total_to_december_signups
+    end
+    if Time.now >= Date.new(2023, 1, 1)
+        @total_to_january_signups = User.all.where("created_at < ?", Date.new(2023, 1, 1)).count
+        @twentytwentytwo_signups << @total_to_january_signups
+    end
+
+    
+    @total_to_september_signups = User.all.where("created_at < ?", Date.new(2022, 9, 1)).count
+    @total_to_october_signups = User.all.where("created_at < ?", Date.new(2022, 10, 1)).count
+    @total_to_november_signups = User.all.where("created_at < ?", Date.new(2022, 11, 1)).count
+    @total_to_december_signups = User.all.where("created_at < ?", Date.new(2022, 12, 1)).count
+    @total_to_january_signups = User.all.where("created_at < ?", Date.new(2023, 1, 1)).count 
+%>
+
+
+
+<%# @twentytwentytwo_signups = [@total_to_july_signups, @total_to_august_signups, @total_to_september_signups, @total_to_october_signups, @total_to_november_signups, @total_to_december_signups, @total_to_january_signups] %>
+
+<%# raise %>
+<%# %>
+<div>
+  <canvas id="myChart" data-chart-data="<%= @twentytwentytwo_signups %>"></canvas>
+  <p style="font-size: large; margin-top: 20px;">Total signed up users since June 2022: <span style="text-decoration: underline;"><%= User.all.count %></span></p>
+</div>
+
+<%# raise %>
+
+<script>
+chartElementData = document.querySelector('#myChart').dataset.chartData
+console.log(`Chart data ${chartElementData}`)
+console.log(JSON.parse("[" + chartElementData + "]")[0][0])
+  const labels = [
+   
+    'June 2022',
+    'July 2022',
+    'August 2022',
+    'September 2022',
+    'October 2022',
+    'November 2022',
+    'December 2022',
+   
+  ];
+
+  const data = {
+    labels: labels,
+    
+    datasets: [{
+      label: 'Total Signups 2022',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: JSON.parse("[" + chartElementData + "]")[0],
+    }],
+
+    
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+        scales: {
+            y: {
+                ticks: {
+                    stepSize: 1
+                }
+            }
+        }
+    }
+  };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>

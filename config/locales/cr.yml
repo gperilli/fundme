@@ -1,0 +1,333 @@
+
+
+cr:
+  meta_title: "FundMe - Sipò legal pou moun ki fè fas a depòtasyon"
+  meta_description: "FundMe se yon sèvis abònman ki bay avoka pou odyans depòtasyon manm yo." 
+  # signups
+  login: "konekte"
+  log_out: "lògawoug"
+  username: "non itilizatè"
+  email: "imèl"
+  forgot_your_password?: "Bliye mo pas ou?"
+  send_me_reset_password_instructions: "Voye m 'Reyajiste enstriksyon modpas"
+  send: "voye"
+  optional: "si ou ousyonèl"
+  6_characters_minimum: "6 karaktè minimòm"
+  first_name: "prenon"
+  last_name: "siyati"
+  other_names: "lòt non yo"
+  # sections
+  sections: "seksyon yo"
+  about: "Konsènan"
+  stories: "Istwa yo"
+  # User information
+  email: "imèl"
+  user_number: "Nimewo itilizatè"
+  user_id: "ID itilizatè"
+  active_subscriptions: "Abònman aktif"
+  language: "Lang"
+  none: "Nah"
+  # buttons
+  donate: "done"
+  user_page: "paj itilizatè"
+  # contact form
+  Name: "Non..."
+  Email_Address: "Adrès Imèl..."
+  Subject: "Sijè..."
+  Message: "Mesaj..."
+  Send: "voye"
+  address: "Adrès"
+  immigration_law: "lwa imigrasyon"
+  contact: "Kontakte"
+  login_sign_up: "konekte / enskri"
+  sign_up: "enskri"
+  contact_us: "kontakte nou"
+  # donations
+  total_donations: "Don"
+  make_a_donation: "Fè yon don"
+  make_a_new_donation: "Fè yon nouvo don"
+  $sum_/_month: "$20 / MWA"
+  $sum_/_year: "$200 / ANE"
+  this_payment_is_for_one_month: "Peman sa a se pou yon mwa."
+  this_payment_is_for_one_year: "Peman sa a se pou yon ane."
+  total_to_date: "Total"
+  one_time_donation: "YON SÈL FWA DONASYON"
+  any_information_of_yours: "Nou opere nan Tribinal Federal Etazini, Distri Sid Florid."
+  # donation history
+  donation_history: "istwa donasyon"
+  payment_time: "Tan"
+  stripe_payment_reference: "Referans pou peman Stripe"
+  amount: "Montan"
+  type: "Tip"
+  status: "Estati"
+  subscription: "abònman"
+  pages:
+    home:
+      donate: "done"
+      providing_lawyers: "Bay avoka pou moun ki fè fas a depòtasyon."
+      undocumented?: "San dokiman?"
+      if_you_are_undocumented: "Si w pa gen papye epi yo arete w w ap sibi depòtasyon (retire)." 
+      the_us_government: "Gouvènman ameriken an pap bay yon avoka pou odisyon ou depotasyon. pou anboche yon avoka pral koute ou nenpòt kote 3-10 mil dola."
+      we_raise_funds: "Nou ranmase lajan pou sèl objektif anboche avoka pou reprezantasyon nan pwosedi depòtasyon. Sa gen ladann odyans mèt kalandriye ak odyans merit. Nan moman sa a nou kapab sèlman akomode rezidan Miami-Dade, Broward ak Palm Beach."
+      we_raise_funds_in_five_ways: "Nou ranmase lajan nan senk fason;"
+      donations_from_people_who_share_our_views: "Donasyon moun ki pataje opinyon nou yo."
+      donations_from_people_who_attend_our_fundraisers: "Donasyon moun ki patisipe nan rasanbleman nou yo."
+      individuals_who_make_monthly_donations: "Moun ki fè don chak mwa."
+      attorneys_who_are_willing_to_work_partially_pro-bono: "Avoka ki vle travay pasyèlman pro-bono."
+      our_personal_funds: "Fon pèsonèl nou yo."
+      for_a_small_monthly_donation: "Pou yon ti don mwa ou ka vin manm fon defans depotasyon."
+      immigration_law: "lwa imigrasyon"
+      becoming_a_FundMe_member: "Vin yon Manm"
+      we_will_never_ask: "Nou p'ap janm mande adrès ou oswa kote ou. Nou pa vle konnen, nan ka nenpòt otorite ta janm mande nou. Bay imèl ou a opsyonèl epi li pa obligatwa."
+      we_will_never_ask_for_your_address: "Nou p'ap janm mande adrès ou oswa kote ou. Nou pa vle konnen, nan ka nenpòt otorite ta janm mande nou. Bay imèl ou a opsyonèl epi li pa obligatwa."
+      follow_these_steps_to_make_donations: "Swiv etap sa yo pou fè don:"
+      purchase_a_$20_prepaid: "Achte yon kat viza prépayé $20 (wallmart, target, CVS, wallgreens, elatriye). Kat la koute $5 - ou ka vle mete $100 sou kat la epi sèvi ak li senk fwa pou ou pa bezwen achte 5 kat. (Pa achte yon kat rechargeable kòm lè sa a yo vle enfòmasyon nan men ou)"
+      go_to_donation_page: "Ale nan paj don nan sit entènèt epi vin yon donatè chak mwa oswa chak ane."
+      check_your_member_number: "Wap resevwa nimewo manm ou ak nimewo telefòn ijans ou. Ekri enfòmasyon sa yo epi bay yon moun ou fè konfyans."
+      dont_forget: "Pa bliye fè sa chak mwa oswa manm yo ap tonbe."
+      if_you_are_arrested: "Si yo arete w pa ICE, rele nimewo ijans bileng nou an epi bay nimewo manm ou a ak detay sou arestasyon ak kote yo ye a."
+      FundMe_will_use: "Nou pral sèvi ak tout resous Fon Defans Depòtasyon pou jwenn yon bon avoka imigrasyon gratis."
+      legal_support: "Sipò Legal"
+      all_attorneys_that_work_with_us: "Tout avoka ki travay avèk nou se bilimgual."
+      we_are_against_the_breakup: "Nou kont kraze fanmi yo. Nou fè efò pou ede nenpòt moun ki nan sitiyasyon malere sa a, men donatè chak mwa nou yo gen priyorite. Donatè ki gen plan mansyèl yo ka asire yo ke yo pral gen tout resous Fon Defans Depòtasyon pou jwenn yon avoka swa imedyatman apre yon arestasyon oswa anvan nenpòt pwosedi depòtasyon. Moun ki arete sou yon akizasyon kriminèl pral resevwa yon avoka nan men gouvènman an pou dosye kriminèl yo sèlman. Avoka nou yo pral travay avèk avoka kriminèl ou a pou egzamine pi bon fason pou jere sitiyasyon imigrasyon ou. Tout avoka ki travay avèk nou se bilimgual. Nou toujou ap voye imèl bay reprezantan kongrè sid florida nou yo, pou fè yo pase lejislasyon pou bay avoka pou imigran yo. Nou ankouraje w fè menm bagay la."
+      # video stories
+      jorge_garcia_and_his_family_speak_out: "Jorge Garcia ak fanmi li pale soti"
+      the_undocumented_father: "Papa de moun ki pa gen papye de ak fanmi l pataje eksperyans yo te fè a."
+      soccer_star_deported: "Foutbòl Star Depòte"
+      lizandro_Claros-Saravia: "Lizandro Claros-Saravia depòte apre rapòte bous detid nan ICE"
+      OITNB_actress_speaks_out: "'OITNB' aktris pale sou depòtasyon fanmi an"
+      actress_Diane_Guerrero: "Aktris Diane Guerrero pale sou depòtasyon fanmi li soti nan peyi Etazini.nan Kolonbi."
+  donations:
+    new:
+      make_your_donation: "Fè Don ou yo!"
+      this_is_a_one_time_donation: "Sa a se yon sèl fwa donasyon"
+      this_is_a_20_dollar_subscription: "Sa a se yon don $ 20 / mwa"
+      this_is_a_200_dollar_subscription: "Sa a se yon don $ 200 / ane"
+      please_enter_the_donation_amount: "Tanpri antre kantite lajan don an nan bwat nimewo a."
+      payments_are_accepted_with: "Peman yo aksepte ak (prepare) Visa, Mastercard, Lachin UnionPay ak anpil mak kat plis."
+      card_payments_are: "Peman kat yo trete nan Stripe. Soumèt imèl pa nesesè. Tanpri tcheke paj login itilizatè ou an pou detay tranzaksyon Stripe."
+      active_subscriptions: "Active subscriptions"
+      total_contributions_to_date: "Kontribisyon total nan dat"
+    show: 
+      user_name: "Non itilizatè"
+      user_number: "Nimewo itilizatè"
+      user_id: "ID itilizatè"
+      donation_type: "kalite donasyon"
+      donation_amount: "Montan don"
+      donation_time: "Tan don"
+      stripe_payment_reference: "Referans pou peman Stripe"
+      active_subscriptions: "Abònman aktif"
+
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Validation failed: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Cannot delete record because a dependent %{record} exists
+          has_many: Cannot delete record because dependent %{record} exist
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: about 1 hour
+        other: about %{count} hours
+      about_x_months:
+        one: about 1 month
+        other: about %{count} months
+      about_x_years:
+        one: about 1 year
+        other: about %{count} years
+      almost_x_years:
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      less_than_x_minutes:
+        one: less than a minute
+        other: less than %{count} minutes
+      over_x_years:
+        one: over 1 year
+        other: over %{count} years
+      x_seconds:
+        one: 1 second
+        other: "%{count} seconds"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_days:
+        one: 1 day
+        other: "%{count} days"
+      x_months:
+        one: 1 month
+        other: "%{count} months"
+      x_years:
+        one: 1 year
+        other: "%{count} years"
+    prompts:
+      second: Second
+      minute: Minute
+      hour: Hour
+      day: Day
+      month: Month
+      year: Year
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      confirmation: doesn't match %{attribute}
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      less_than: must be less than %{count}
+      less_than_or_equal_to: must be less than or equal to %{count}
+      model_invalid: 'Validation failed: %{errors}'
+      not_a_number: is not a number
+      not_an_integer: must be an integer
+      odd: must be odd
+      other_than: must be other than %{count}
+      present: must be blank
+      required: must exist
+      taken: has already been taken
+      too_long:
+        one: is too long (maximum is 1 character)
+        other: is too long (maximum is %{count} characters)
+      too_short:
+        one: is too short (minimum is 1 character)
+        other: is too short (minimum is %{count} characters)
+      wrong_length:
+        one: is the wrong length (should be 1 character)
+        other: is the wrong length (should be %{count} characters)
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Billion
+          million: Million
+          quadrillion: Quadrillion
+          thousand: Thousand
+          trillion: Trillion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ", and "
+      two_words_connector: " and "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm

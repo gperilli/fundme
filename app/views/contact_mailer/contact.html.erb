@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Message from FundMe Contact Form</h1>
+    <h2>Name: <%= @message_form[:name] %></h2>
+    <h2>Email: <%= @message_form[:email] %></h2>
+    <h3>Message Subject: <%= @message_form[:subject] %></h3>
+    <p>
+      <%= @message_form[:message] %>.<br>
+    </p>
+    <p>Sent at: <%= Time.now %></p>
+  </body>
+</html>
