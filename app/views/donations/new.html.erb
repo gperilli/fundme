@@ -56,7 +56,7 @@
               <% if current_user.subscribed == false %>
                 <%= t("none") %>
               <% else %>
-                <% subscription_amount = Donation.find_by(donation_type: 'subscription').amount %>
+                <% subscription_amount = Donation.find_by(donation_type: 'subscription')&.amount %>
                 $<%= subscription_amount  %>
                 <%= subscription_amount == SubscriptionParameter.find_by(active: true).monthly_subscription_amount ? "/ month" : "/ year" %>
               <% end %>
