@@ -4,11 +4,11 @@ class DonationsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    if params[:sub_amount] == SubscriptionParameter.find_by(active: true).monthly_subscription_amount.to_s && current_user.subscribed == false
-      @sub_amount = params[:sub_amount].to_i
+    if params[:donation_type] == "monthly_subscription" && current_user.subscribed == false
+      @sub_amount = SubscriptionParameter.find_by(active: true).monthly_subscription_amount
       @sub_frequency = 'monthly'
-    elsif params[:sub_amount] == SubscriptionParameter.find_by(active: true).yearly_subscription_amount.to_s && current_user.subscribed == false
-      @sub_amount = params[:sub_amount].to_i
+    elsif params[:donation_type] == "yearly_subscription" && current_user.subscribed == false
+      @sub_amount = SubscriptionParameter.find_by(active: true).yearly_subscription_amount
       @sub_frequency = 'yearly'
     else
       @sub_amount = 0
@@ -69,8 +69,7 @@ class DonationsController < ApplicationController
       :title,
       :stripe_payment_id,
       :donation_type,
-      :amount,
-      :subscription_frequency
+      :amount
     )
   end
 end

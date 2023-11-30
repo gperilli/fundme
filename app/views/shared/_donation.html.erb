@@ -13,7 +13,7 @@
                         <h4 class="text-uppercase m-0 mt-2"><%= t("this_payment_is_for_one_month") %></h4>
                         <hr class="my-4 mx-auto" />
                         <div class="small text-black-50">-</div>
-                        <%= link_to t("$sum_/_month"), new_donation_path(:sub_amount => SubscriptionParameter.find_by(active: true).monthly_subscription_amount), class: "btn btn-primary mb-2 fundme-button-link" %>
+                        <%= link_to t("$sum_/_month"), new_donation_path(:donation_type => "monthly_subscription"), class: "btn btn-primary mb-2 fundme-button-link" %>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                         <h4 class="text-uppercase m-0 mt-2"><%= t("this_payment_is_for_one_year") %></h4>
                         <hr class="my-4 mx-auto" />
                         <div class="small text-black-50">-</div>
-                        <%= link_to t("$sum_/_year"), new_donation_path(:sub_amount => SubscriptionParameter.find_by(active: true).yearly_subscription_amount), class: "btn btn-primary mb-2 fundme-button-link" %>
+                        <%= link_to t("$sum_/_year"), new_donation_path(:donation_type => "yearly_subscription"), class: "btn btn-primary mb-2 fundme-button-link" %>
                     </div>
                 </div>
             </div>
