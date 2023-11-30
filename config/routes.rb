@@ -18,7 +18,6 @@ Rails.application.routes.draw do
 
   resources :donations, only: [:create, :show, :new]
   resources :payment_intents
-  resources :webhooks, only: [:create]
   resources :fmpages, only: [:show]
 
   root to: 'pages#home'
