@@ -225,7 +225,7 @@ Install Rails:
 gem install rails -v 6.0.3
 ```
 
-### Confirm that the PostgreSQL databse is running:
+### Confirm that the PostgreSQL database is running:
 In another terminal window:
 ```
 sudo systemctl status postgresql
@@ -240,7 +240,7 @@ postgresql.service - PostgreSQL RDBMS
         CPU: 1ms
 ```
 
-The databse server can be started and stopped with:
+The database server can be started and stopped with:
 
 ```
 sudo systemctl start postgresql
@@ -249,7 +249,7 @@ sudo systemctl start postgresql
 ```
 sudo systemctl stop postgresql
 ```
-### Create, migrate, and seed the project databse:
+### Create, migrate, and seed the project database:
 ```
 rails db:create
 rails db:migrate
@@ -293,6 +293,16 @@ bundle exec sidekiq
 Run this command to execute the Rails server, then go to `localhost:3000` to see the running app.
 ```
 rails s
+```
+
+## Running Rubocop: Ruby linting
+Run rubocop using:
+```
+rake rubocop
+```
+Auto lint the code using:
+```
+rubocop -A
 ```
 
 ## Contributing
