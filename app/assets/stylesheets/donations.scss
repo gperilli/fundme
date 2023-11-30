@@ -88,10 +88,7 @@
   }
 
   .container,
-  .container-fluid,
-  .container-lg,
-  .container-wide,
-  .container-xl {
+  .container-lg {
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
@@ -100,11 +97,6 @@
   .container,
   .container-lg {
     max-width: 1040px;
-  }
-
-  .container-wide,
-  .container-xl {
-    max-width: 1160px;
   }
 
   .common-SuperTitle {
@@ -877,4 +869,3 @@
     }
 
   }
-
