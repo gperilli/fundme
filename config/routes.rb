@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   end
   mount Sidekiq::Web, at: '/sidekiq'
 
-  # resources :admin
   # Devise
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
