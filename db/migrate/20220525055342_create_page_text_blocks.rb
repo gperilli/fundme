@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePageTextBlocks < ActiveRecord::Migration[6.0]
   def change
     create_table :page_text_blocks do |t|

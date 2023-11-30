@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Fmpage do
   menu priority: 4
   permit_params :title
@@ -15,5 +17,4 @@ ActiveAdmin.register Fmpage do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-
 end

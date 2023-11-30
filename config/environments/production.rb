@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -51,7 +53,7 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -80,8 +82,8 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
+    logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
@@ -91,23 +93,24 @@ Rails.application.configure do
 
   # Action Mailer Settings
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: "fundme.herokuapp.com", protocol: "https" }
+  config.action_mailer.default_url_options = { host: 'fundme.herokuapp.com', protocol: 'https' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_caching = false
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    address:              'smtp.zoho.jp',
-    port:                 '465',
-    domain:               'fundme.herokuapp.com',
-    user_name:            Rails.application.config.mailer_address,
-    password:             ENV['ZOHO_PASSWORD'],
-    authentication:       :plain,
-    ssl:                    true,
+    address: 'smtp.zoho.jp',
+    port: '465',
+    domain: 'fundme.herokuapp.com',
+    user_name: Rails.application.config.mailer_address,
+    password: ENV['ZOHO_PASSWORD'],
+    authentication: :plain,
+    ssl: true,
     enable_starttls_auto: true,
-    open_timeout:         5,
-    read_timeout:         5 }
+    open_timeout: 5,
+    read_timeout: 5
+  }
 
-ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.delivery_method = :smtp
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write

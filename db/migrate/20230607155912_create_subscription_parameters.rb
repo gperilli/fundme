@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSubscriptionParameters < ActiveRecord::Migration[6.0]
   def change
     create_table :subscription_parameters do |t|

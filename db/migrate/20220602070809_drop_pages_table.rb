@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class DropPagesTable < ActiveRecord::Migration[6.0]
-  #def up
+  # def up
   #  drop_table :pages
-  #end
-#
-  #def down
+  # end
+  #
+  # def down
   #  raise ActiveRecord::IrreversibleMigration
-  #end
+  # end
 end

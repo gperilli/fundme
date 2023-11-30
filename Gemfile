@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -24,7 +26,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rubocop', require: false
 end
 
@@ -35,21 +37,20 @@ group :development do
   # gem 'spring'
   gem 'annotate'
   gem 'pry-rails'
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'stripe'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
-gem 'dotenv-rails', :groups => [:development, :test]
 gem 'devise'
+gem 'dotenv-rails', groups: %i[development test]
 gem 'i18n'
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
-gem "sidekiq", "~> 6.4"
-gem 'sidekiq-failures', '~> 1.0'
 gem 'redis', '< 4.6'
+gem 'sidekiq', '~> 6.4'
+gem 'sidekiq-failures', '~> 1.0'
 
 gem 'activeadmin'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'

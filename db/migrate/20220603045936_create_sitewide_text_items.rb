@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSitewideTextItems < ActiveRecord::Migration[6.0]
   def change
     create_table :sitewide_text_items do |t|

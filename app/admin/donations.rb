@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Donation do
   menu priority: 2
   # See permitted parameters documentation:
