@@ -1,40 +1,45 @@
 .donation-section {
-    padding-top: 0rem;
-  }
-.donation-section .card {
-border: 0;
-border-bottom: 0.25rem solid var(--bs-yellow-darker);
-}
-.donation-section .card h4, .donation-section .card .h4 {
-font-size: 0.8rem;
-font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-text-transform: uppercase;
-letter-spacing: 0.15rem;
-}
-.donation-section .card hr {
-border-color: var(--bs-yellow-darker);
-border-width: 0.25rem;
-width: 3rem;
-}
-.donation-section .social {
-margin-top: 5rem;
-}
-.donation-section .social a {
-text-align: center;
-height: 3rem;
-width: 3rem;
-background: rgba(255, 255, 255, 0.1);
-border-radius: 100%;
-line-height: 3rem;
-color: rgba(255, 255, 255, 0.3);
-}
-.donation-section .social a:hover {
-color: rgba(255, 255, 255, 0.5);
-}
-.donation-section .social a:active {
-color: #fff;
+  padding-top: 0rem;
 }
 
+.donation-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid var(--bs-yellow-darker);
+}
+
+.donation-section .card h4, .donation-section .card .h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.donation-section .card hr {
+  border-color: var(--bs-yellow-darker);
+  border-width: 0.25rem;
+  width: 3rem;
+}
+
+.donation-section .social {
+  margin-top: 5rem;
+}
+.donation-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.donation-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.donation-section .social a:active {
+  color: #fff;
+}
 
 .example.example4 {
   background-color: #f6f9fc;

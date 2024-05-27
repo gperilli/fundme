@@ -3,30 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-* {
-    box-sizing: border-box;
-  }
-
-  blockquote,
-  body,
-  button,
-  dd,
-  dl,
-  figure,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ol,
-  p,
-  pre,
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
   button,
   select {
     border: none;
@@ -48,24 +24,6 @@
     height: 100%;
   }
 
-  body {
-    background: #fff;
-    min-height: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    font-size: 62.5%;
-    font-family: Roboto, Open Sans, Segoe UI, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "pnum";
-    font-variant-numeric: proportional-nums;
-  }
 
 
   @font-face {
@@ -552,7 +510,6 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-
   }
 
   .donations-container {
