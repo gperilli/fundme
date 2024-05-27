@@ -23,10 +23,6 @@ ActiveAdmin.register_page 'Dashboard' do
           render 'info'
         end
 
-        panel 'Google Analytics' do
-          render 'google_analytics'
-        end
-
         panel 'Donations' do
           render 'donation_chart'
         end

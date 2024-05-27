@@ -38,17 +38,6 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM0DCZW689"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-EM0DCZW689');
-    </script>
-
     <!-- Turbo links -->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -66,13 +55,8 @@
   <body id="page-top">
     <%= render 'shared/navbar' %>
     <%= yield %>
-    <%# if params[:controller] == "devise/sessions" || params[:controller] == "devise/registrations" %>
-
-      <%#= render 'shared/footer' %>
-    <%# else %>
-      <%= render 'shared/footer' %>
-    <%# end %>
-    <!-- Devise Alerts -->
+    <%= render 'shared/footer' %>
+    
     <%= render 'shared/flashes' %>
   </body>
 
