@@ -47,14 +47,16 @@
   box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
+html {
+  overflow-x: hidden;
+  height: 100%;
+  scroll-padding-top: calc(4.5rem - 1px);
 }
 
-html {
-  scroll-padding-top: calc(4.5rem - 1px);
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

@@ -1,0 +1,42 @@
+.donation-cards-container {
+  padding-top: 0rem;
+}
+
+.donation-cards-container .card {
+  border: 0;
+  border-bottom: 0.25rem solid var(--bs-yellow-darker);
+}
+
+.donation-cards-container .card h4, .donation-cards-container .card .h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.donation-cards-container .card hr {
+  border-color: var(--bs-yellow-darker);
+  border-width: 0.25rem;
+  width: 3rem;
+}
+
+.donation-cards-container .social {
+  margin-top: 5rem;
+}
+.donation-cards-container .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.donation-cards-container .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.donation-cards-container .social a:active {
+  color: #fff;
+}

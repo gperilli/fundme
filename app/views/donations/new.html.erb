@@ -19,13 +19,11 @@
   <% end %>
 
   <main>
-    <section class="container-lg">
+    <div class="donation-outer-container">
       <div
-        class="cell example example4 donations-container"
-        id="example-4"
-        style="background-color: rgba(255, 255, 255, 0.4)"
+        class="cell example4 donation-form-container"
       >
-        <form action="/donations" method="post" id="new_donation">
+        <form action="/donations" method="post" id="new_donation" class="donation-form"> 
           <h1 class=" mb-4" style="font-weight: 800; font-size: 30px;"><%= current_user.username %></h1>
           <p class=" mb-4"><%= @sitewide_text_items.find_by(name: "payment page message")[I18n.locale.to_s] %></p>
           <p class=" mb-4"><%= form_title %></p>
@@ -51,7 +49,7 @@
           <div id="example4-paymentRequest">
             <!--Stripe paymentRequestButton Element inserted here-->
           </div>
-          <fieldset style="background: rgba(255,255,255,0.8)">
+          <fieldset>
             <% if @sub_amount == 0 || current_user.subscribed == true %>
               <!-- -->
               <div style="display: flex; flex-direction: row; justify-content: center;">
@@ -73,7 +71,7 @@
               data-tid="elements_examples.form.enter_card_manually"
             >Or enter card details</legend>
             <div class="container">
-              <div id="example4-card"></div>
+              <div id="stripe-element"></div>
               <button type="submit" data-tid="elements_examples.form.donate_button"><%= t("donate") %></button>
             </div>
           </fieldset>
@@ -109,7 +107,8 @@
                 d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"
               ></path>
             </svg>
-            <span class="message"></span></div>
+            <span class="message"></span>
+          </div>
         </form>
 
         <div class="success">
@@ -166,7 +165,7 @@
           <span data-tid="elements_examples.caption.no_charge" style="">Payments processed with Stripe</span>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 </div>
 
@@ -198,9 +197,9 @@
   var elements = stripe.elements();
   var cardElement = elements.create('card', {
     style: styles,
-    // hidePostalCode: true,
+    hidePostalCode: true,
     });
-  cardElement.mount('#example4-card');
+  cardElement.mount('#stripe-element');
 
   const form = document.querySelector('#new_donation');
 
@@ -209,7 +208,7 @@
 
   form.addEventListener('submit', function(e) {
 
-  var formClass = '.example4';// + exampleName;
+  var formClass = '.donation-form-container';
   var example = document.querySelector(formClass);
   example.classList.add('submitting');
 
@@ -223,43 +222,46 @@
     e.preventDefault();
 
     // Step 1: POST request to create payment intent
-    fetch('/payment_intents', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        authenticity_token: '<%= form_authenticity_token %>',
-
-        payment_intent: {
-          status: "paid",
-          donation_type: '<%= donation_type %>',
-          amount: donationAmount,
-          }
-      }),
-    })
-    .then((response) => response.json())
-    .then((paymentIntent) => {
-      // Step 2: Create payment method and confirm payment intent.
-      stripe.confirmCardPayment(
-        paymentIntent.client_secret, {
-          payment_method: {
-            card: cardElement
-          }
-        }
-      ).then((resp) => {
-        if(resp.error) {
-          alert(resp.error.message);
-        } else {
-          // Step 3: Embed payment ID in form
-          const paymentIdInput = document.querySelector('#payment');
-          paymentIdInput.value = paymentIntent.id;
-          // Embed payment amount
-          const donationOutputAmount = document.querySelector('#donation_amount');
-          donationOutputAmount.value = donationAmount;
-          example.classList.remove('submitting');
-            example.classList.add('submitted');
-
+    console.log("donationAmount");
+    console.log(donationAmount);
+    
+     fetch('/payment_intents', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json',
+       },
+       body: JSON.stringify({
+         authenticity_token: '<%= form_authenticity_token %>',
+ 
+         payment_intent: {
+           status: "paid",
+           donation_type: '<%= donation_type %>',
+           amount: donationAmount,
+           }
+       }),
+     })
+     .then((response) => response.json())
+     .then((paymentIntent) => {
+       // Step 2: Create payment method and confirm payment intent.
+       stripe.confirmCardPayment(
+         paymentIntent.client_secret, {
+           payment_method: {
+             card: cardElement
+           }
+         }
+       ).then((resp) => {
+         if(resp.error) {
+           alert(resp.error.message);
+         } else {
+           // Step 3: Embed payment ID in form
+           const paymentIdInput = document.querySelector('#payment');
+           paymentIdInput.value = paymentIntent.id;
+           // Embed payment amount
+           const donationOutputAmount = document.querySelector('#donation_amount');
+           donationOutputAmount.value = donationAmount;
+           example.classList.remove('submitting');
+             example.classList.add('submitted');
+ 
           setTimeout(form.submit(), 3500);
         }
       })
